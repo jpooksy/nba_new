@@ -2962,3 +2962,950 @@ ORDER BY
 [0m01:28:11.020015 [debug] [MainThread]: Command `dbt run` succeeded at 01:28:11.019864 after 8.41 seconds
 [0m01:28:11.021787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb3992250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb3a7e990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb0f0b5d0>]}
 [0m01:28:11.023594 [debug] [MainThread]: Flushing usage events
+[0m17:38:02.527875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9424c750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff94296990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff94284750>]}
+
+
+============================== 17:38:02.531153 | c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646 ==============================
+[0m17:38:02.531153 [info ] [MainThread]: Running with dbt=1.8.7
+[0m17:38:02.533928 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/workspaces/fxtn7c3oiwkalwzz', 'version_check': 'True', 'debug': 'False', 'log_path': '/workspaces/fxtn7c3oiwkalwzz/repository/nba/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:38:03.593335 [info ] [MainThread]: Initializing dbt-loom=0.7.0
+[0m17:38:03.594143 [info ] [MainThread]: dbt-loom: Patching ref protection methods to support dbt-loom dependencies.
+[0m17:38:03.596631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e29fed0>]}
+[0m17:38:03.669960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff954b1a90>]}
+[0m17:38:03.671163 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m17:38:03.818550 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m17:38:03.985369 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:38:03.986007 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:38:03.988447 [info ] [MainThread]: dbt-loom: Injecting nodes
+[0m17:38:04.041219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7bfb2c10>]}
+[0m17:38:04.178240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e3e4f90>]}
+[0m17:38:04.179062 [info ] [MainThread]: Found 12 models, 3 data tests, 7 sources, 1 exposure, 461 macros
+[0m17:38:04.180954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c180690>]}
+[0m17:38:04.184720 [info ] [MainThread]: 
+[0m17:38:04.185615 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m17:38:04.201058 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA'
+[0m17:38:04.201964 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA'
+[0m17:38:04.202781 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA'
+[0m17:38:04.219208 [debug] [ThreadPool]: Using snowflake connection "list_NBA"
+[0m17:38:04.225067 [debug] [ThreadPool]: On list_NBA: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA"} */
+show terse schemas in database NBA
+    limit 10000
+[0m17:38:04.224443 [debug] [ThreadPool]: Using snowflake connection "list_NBA"
+[0m17:38:04.229520 [debug] [ThreadPool]: On list_NBA: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA"} */
+show terse schemas in database NBA
+    limit 10000
+[0m17:38:04.231866 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:38:04.221899 [debug] [ThreadPool]: Using snowflake connection "list_NBA"
+[0m17:38:04.237267 [debug] [ThreadPool]: On list_NBA: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA"} */
+show terse schemas in database NBA
+    limit 10000
+[0m17:38:04.227563 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:38:04.238702 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:38:04.913591 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.682 seconds
+[0m17:38:04.916050 [debug] [ThreadPool]: On list_NBA: Close
+[0m17:38:04.917627 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.679 seconds
+[0m17:38:04.923176 [debug] [ThreadPool]: On list_NBA: Close
+[0m17:38:05.061738 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.834 seconds
+[0m17:38:05.063957 [debug] [ThreadPool]: On list_NBA: Close
+[0m17:38:05.234869 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_NBA, now list_NBA_staging)
+[0m17:38:05.237971 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_NBA, now list_NBA_warehouse)
+[0m17:38:05.244042 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_NBA, now list_NBA_intermediate)
+[0m17:38:05.248173 [debug] [ThreadPool]: Using snowflake connection "list_NBA_staging"
+[0m17:38:05.251784 [debug] [ThreadPool]: Using snowflake connection "list_NBA_warehouse"
+[0m17:38:05.255174 [debug] [ThreadPool]: Using snowflake connection "list_NBA_intermediate"
+[0m17:38:05.258410 [debug] [ThreadPool]: On list_NBA_staging: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_staging"} */
+show objects in NBA.staging limit 10000
+[0m17:38:05.260364 [debug] [ThreadPool]: On list_NBA_warehouse: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_warehouse"} */
+show objects in NBA.warehouse limit 10000
+[0m17:38:05.266917 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:38:05.264984 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:38:05.262355 [debug] [ThreadPool]: On list_NBA_intermediate: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_intermediate"} */
+show objects in NBA.intermediate limit 10000
+[0m17:38:05.275407 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:38:05.821958 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.555 seconds
+[0m17:38:05.824190 [debug] [ThreadPool]: On list_NBA_warehouse: Close
+[0m17:38:05.838287 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.563 seconds
+[0m17:38:05.840249 [debug] [ThreadPool]: On list_NBA_intermediate: Close
+[0m17:38:05.959084 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.694 seconds
+[0m17:38:05.962561 [debug] [ThreadPool]: On list_NBA_staging: Close
+[0m17:38:06.163830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c0eaf10>]}
+[0m17:38:06.164662 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m17:38:06.166577 [info ] [MainThread]: 
+[0m17:38:06.171308 [debug] [Thread-1 (]: Began running node model.nba.stg_common_player_info
+[0m17:38:06.171940 [debug] [Thread-2 (]: Began running node model.nba.stg_games
+[0m17:38:06.176836 [info ] [Thread-2 (]: 2 of 12 START sql view model staging.stg_games ................................. [RUN]
+[0m17:38:06.178718 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_NBA_warehouse, now model.nba.stg_games)
+[0m17:38:06.174075 [debug] [Thread-5 (]: Began running node model.nba.stg_team_stats_by_season
+[0m17:38:06.174698 [debug] [Thread-6 (]: Began running node model.nba.stg_teams
+[0m17:38:06.175425 [info ] [Thread-1 (]: 1 of 12 START sql view model staging.stg_common_player_info .................... [RUN]
+[0m17:38:06.172750 [debug] [Thread-3 (]: Began running node model.nba.stg_player_game_logs
+[0m17:38:06.173292 [debug] [Thread-4 (]: Began running node model.nba.stg_team_spend_by_season
+[0m17:38:06.190112 [info ] [Thread-4 (]: 4 of 12 START sql view model staging.stg_team_spend_by_season .................. [RUN]
+[0m17:38:06.192077 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.nba.stg_team_spend_by_season'
+[0m17:38:06.184351 [info ] [Thread-6 (]: 6 of 12 START sql view model staging.stg_teams ................................. [RUN]
+[0m17:38:06.195801 [debug] [Thread-6 (]: Acquiring new snowflake connection 'model.nba.stg_teams'
+[0m17:38:06.197563 [debug] [Thread-6 (]: Began compiling node model.nba.stg_teams
+[0m17:38:06.206512 [debug] [Thread-6 (]: Writing injected SQL for node "model.nba.stg_teams"
+[0m17:38:06.180502 [debug] [Thread-2 (]: Began compiling node model.nba.stg_games
+[0m17:38:06.193790 [debug] [Thread-4 (]: Began compiling node model.nba.stg_team_spend_by_season
+[0m17:38:06.186223 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_NBA_staging, now model.nba.stg_common_player_info)
+[0m17:38:06.188179 [info ] [Thread-3 (]: 3 of 12 START sql view model staging.stg_player_game_logs ...................... [RUN]
+[0m17:38:06.182537 [info ] [Thread-5 (]: 5 of 12 START sql view model staging.stg_team_stats_by_season .................. [RUN]
+[0m17:38:06.222913 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.nba.stg_team_stats_by_season'
+[0m17:38:06.224643 [debug] [Thread-5 (]: Began compiling node model.nba.stg_team_stats_by_season
+[0m17:38:06.218338 [debug] [Thread-6 (]: Began executing node model.nba.stg_teams
+[0m17:38:06.218950 [debug] [Thread-1 (]: Began compiling node model.nba.stg_common_player_info
+[0m17:38:06.220942 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_NBA_intermediate, now model.nba.stg_player_game_logs)
+[0m17:38:06.213526 [debug] [Thread-2 (]: Writing injected SQL for node "model.nba.stg_games"
+[0m17:38:06.216967 [debug] [Thread-4 (]: Writing injected SQL for node "model.nba.stg_team_spend_by_season"
+[0m17:38:06.229387 [debug] [Thread-5 (]: Writing injected SQL for node "model.nba.stg_team_stats_by_season"
+[0m17:38:06.263762 [debug] [Thread-1 (]: Writing injected SQL for node "model.nba.stg_common_player_info"
+[0m17:38:06.265796 [debug] [Thread-6 (]: Writing runtime sql for node "model.nba.stg_teams"
+[0m17:38:06.266586 [debug] [Thread-3 (]: Began compiling node model.nba.stg_player_game_logs
+[0m17:38:06.283909 [debug] [Thread-3 (]: Writing injected SQL for node "model.nba.stg_player_game_logs"
+[0m17:38:06.275041 [debug] [Thread-4 (]: Began executing node model.nba.stg_team_spend_by_season
+[0m17:38:06.277592 [debug] [Thread-5 (]: Began executing node model.nba.stg_team_stats_by_season
+[0m17:38:06.280166 [debug] [Thread-1 (]: Began executing node model.nba.stg_common_player_info
+[0m17:38:06.272531 [debug] [Thread-2 (]: Began executing node model.nba.stg_games
+[0m17:38:06.301597 [debug] [Thread-2 (]: Writing runtime sql for node "model.nba.stg_games"
+[0m17:38:06.290231 [debug] [Thread-6 (]: Using snowflake connection "model.nba.stg_teams"
+[0m17:38:06.293600 [debug] [Thread-5 (]: Writing runtime sql for node "model.nba.stg_team_stats_by_season"
+[0m17:38:06.296979 [debug] [Thread-1 (]: Writing runtime sql for node "model.nba.stg_common_player_info"
+[0m17:38:06.289066 [debug] [Thread-4 (]: Writing runtime sql for node "model.nba.stg_team_spend_by_season"
+[0m17:38:06.302223 [debug] [Thread-3 (]: Began executing node model.nba.stg_player_game_logs
+[0m17:38:06.304812 [debug] [Thread-6 (]: On model.nba.stg_teams: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.stg_teams"} */
+create or replace   view NBA.staging.stg_teams
+  
+   as (
+    WITH source AS (
+    SELECT 
+        *
+    FROM 
+        NBA.PUBLIC.TEAMS
+),
+
+renamed AS (
+    SELECT
+        id as team_id,
+        full_name,
+        abbreviation as team_name_abbreviation,
+        nickname,
+        city,
+        state,
+        year_founded
+    FROM
+        source
+)
+
+SELECT 
+    *
+FROM
+    renamed
+  );
+[0m17:38:06.309043 [debug] [Thread-2 (]: Using snowflake connection "model.nba.stg_games"
+[0m17:38:06.313006 [debug] [Thread-5 (]: Using snowflake connection "model.nba.stg_team_stats_by_season"
+[0m17:38:06.314782 [debug] [Thread-1 (]: Using snowflake connection "model.nba.stg_common_player_info"
+[0m17:38:06.397237 [debug] [Thread-3 (]: Writing runtime sql for node "model.nba.stg_player_game_logs"
+[0m17:38:06.397958 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m17:38:06.399263 [debug] [Thread-4 (]: Using snowflake connection "model.nba.stg_team_spend_by_season"
+[0m17:38:06.413453 [debug] [Thread-4 (]: On model.nba.stg_team_spend_by_season: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.stg_team_spend_by_season"} */
+create or replace   view NBA.staging.stg_team_spend_by_season
+  
+   as (
+    WITH source AS (
+    SELECT 
+        *
+    FROM 
+        NBA.PUBLIC.TEAM_SPEND_BY_SEASON
+),
+
+renamed as (
+    SELECT 
+        team_id,
+        team_city,
+        team_name,
+        full_name,
+        year as season,
+        total_spend as team_payroll,
+        active_payroll,
+        dead_payroll,
+        luxury_tax_payroll,
+        luxury_tax_space,
+        luxury_tax_bill
+    FROM 
+        source
+)
+
+SELECT
+    *
+FROM
+    renamed
+  );
+[0m17:38:06.415378 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:38:06.404673 [debug] [Thread-1 (]: On model.nba.stg_common_player_info: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.stg_common_player_info"} */
+create or replace   view NBA.staging.stg_common_player_info
+  
+   as (
+    WITH source AS (
+    SELECT 
+        *
+    FROM 
+        NBA.PUBLIC.COMMON_PLAYER_INFO
+),
+
+renamed AS (
+    SELECT 
+        person_id AS player_id,
+        first_name,
+        last_name,
+        display_first_last AS full_name,
+        display_last_comma_first,
+        display_fi_last,
+        player_slug,
+        birthdate,
+        school,
+        country,
+        last_affiliation,
+        height,
+        weight,
+        season_exp AS seasons_played,
+        jersey,
+        position,
+        rosterstatus AS roster_status,
+        games_played_current_season_flag,
+        team_id,
+        team_name,
+        team_abbreviation,
+        team_code,
+        team_city,
+        playercode,
+        from_year AS first_year_played,
+        to_year AS last_year_played,
+        dleague_flag AS g_league_has_played,
+        nba_flag AS nba_has_played,
+        games_played_flag AS games_played,
+        draft_year,
+        draft_round,
+        draft_number,
+        greatest_75_flag AS greatest_75_member
+    FROM 
+        source
+)
+
+SELECT 
+    *
+FROM
+    renamed
+  );
+[0m17:38:06.412657 [debug] [Thread-3 (]: Using snowflake connection "model.nba.stg_player_game_logs"
+[0m17:38:06.400622 [debug] [Thread-2 (]: On model.nba.stg_games: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.stg_games"} */
+create or replace   view NBA.staging.stg_games
+  
+   as (
+    WITH source AS (
+    SELECT 
+        *
+    FROM 
+        NBA.PUBLIC.GAMES
+),
+
+
+renamed AS (
+    SELECT 
+        season_id,
+        team_id,
+        team_abbreviation,
+        team_name,
+        game_id,
+        game_date,
+        matchup,
+        wl,
+        min AS game_duration_mins,
+        pts AS points,
+        fgm AS field_goals_made,
+        fga AS field_goals_attempted,
+        fg_pct AS field_goal_pct,
+        fg3m AS three_point_made,
+        fg3a AS three_point_attempted,
+        fg3_pct AS three_point_pct,
+        ftm AS free_throws_made,
+        fta AS free_throws_attempted,
+        ft_pct AS free_throw_pct,
+        oreb AS offensive_rebounds,
+        dreb AS defensive_rebounds,
+        reb AS total_rebounds,
+        ast AS assists,
+        stl AS steals,
+        blk AS blocks,
+        tov AS turnovers,
+        pf AS personal_fouls,
+        plus_minus,
+        season,
+        game_type
+    FROM 
+        source
+)
+
+SELECT 
+    *
+FROM
+    renamed
+  );
+[0m17:38:06.402573 [debug] [Thread-5 (]: On model.nba.stg_team_stats_by_season: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.stg_team_stats_by_season"} */
+create or replace   view NBA.staging.stg_team_stats_by_season
+  
+   as (
+    WITH source AS (
+    SELECT 
+        *
+    FROM 
+        NBA.PUBLIC.TEAM_STATS_BY_SEASON
+),
+renamed AS (
+    SELECT 
+        team_id,
+        team_city,
+        team_name,
+        year AS season,
+        gp AS games_played,
+        wins,
+        losses,
+        conf_rank AS conference_rank,
+        div_rank AS division_rank,
+        po_wins AS playoff_wins,
+        po_losses AS playoff_losses,
+        nba_finals_appearance,
+        fgm AS field_goals_made,
+        fga AS field_goals_attempted,
+        fg3m AS three_pointers_made,
+        fg3a AS three_pointers_attempted,
+        ftm AS free_throws_made,
+        fta AS free_throws_attempted,
+        oreb AS offensive_rebounds,
+        dreb AS defensive_rebounds,
+        reb AS total_rebounds,
+        ast AS assists,
+        pf AS personal_fouls,
+        stl AS steals,
+        tov AS turnovers,
+        blk AS blocks,
+        pts AS points
+    FROM
+        source
+)
+
+SELECT 
+    *
+FROM
+    renamed
+  );
+[0m17:38:06.426536 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m17:38:06.422828 [debug] [Thread-3 (]: On model.nba.stg_player_game_logs: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.stg_player_game_logs"} */
+create or replace   view NBA.staging.stg_player_game_logs
+  
+   as (
+    WITH source AS (
+    SELECT 
+        *
+    FROM 
+        NBA.PUBLIC.PLAYER_GAME_LOGS
+),
+
+
+renamed AS (
+    SELECT
+        player_id,
+        player_name,
+        nickname,
+        team_id,
+        team_abbreviation,
+        team_name,
+        game_id,
+        game_date,
+        matchup,
+        wl as win_loss,
+        min AS mins_played,
+        fgm AS field_goals_made,
+        fga AS field_goals_attempted,
+        fg_pct AS field_goal_pct,
+        fg3m AS three_point_made,
+        fg3a AS three_point_attempted,
+        fg3_pct AS three_point_pct,
+        ftm AS free_throws_made,
+        fta AS free_throws_attempted,
+        ft_pct AS free_throw_pct,
+        oreb AS offensive_rebounds,
+        dreb AS defensive_rebounds,
+        reb AS total_rebounds,
+        ast AS assists,
+        tov AS turnovers,
+        stl AS steals,
+        blk AS blocks,
+        pf AS personal_fouls,
+        pts AS points,
+        plus_minus AS plus_minus,
+        season,
+        game_type
+    FROM 
+        source
+)
+
+SELECT
+    *
+FROM
+    renamed
+  );
+[0m17:38:06.424705 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:38:06.420532 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:38:06.430874 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:38:07.097536 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.667 seconds
+[0m17:38:07.121814 [debug] [Thread-3 (]: On model.nba.stg_player_game_logs: Close
+[0m17:38:07.125864 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.705 seconds
+[0m17:38:07.127164 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.729 seconds
+[0m17:38:07.129192 [debug] [Thread-1 (]: On model.nba.stg_common_player_info: Close
+[0m17:38:07.131253 [debug] [Thread-6 (]: On model.nba.stg_teams: Close
+[0m17:38:07.164965 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.740 seconds
+[0m17:38:07.167708 [debug] [Thread-2 (]: On model.nba.stg_games: Close
+[0m17:38:07.174626 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.759 seconds
+[0m17:38:07.176806 [debug] [Thread-4 (]: On model.nba.stg_team_spend_by_season: Close
+[0m17:38:07.209015 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.782 seconds
+[0m17:38:07.211414 [debug] [Thread-5 (]: On model.nba.stg_team_stats_by_season: Close
+[0m17:38:07.288452 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c2951d0>]}
+[0m17:38:07.290807 [info ] [Thread-3 (]: 3 of 12 OK created sql view model staging.stg_player_game_logs ................. [[32mSUCCESS 1[0m in 1.07s]
+[0m17:38:07.292634 [debug] [Thread-3 (]: Finished running node model.nba.stg_player_game_logs
+[0m17:38:07.294862 [debug] [Thread-8 (]: Began running node model.nba.player_game_logs_agg_example
+[0m17:38:07.296592 [info ] [Thread-8 (]: 7 of 12 START sql view model intermediate.player_game_logs_agg_example ......... [RUN]
+[0m17:38:07.298478 [debug] [Thread-8 (]: Acquiring new snowflake connection 'model.nba.player_game_logs_agg_example'
+[0m17:38:07.300176 [debug] [Thread-8 (]: Began compiling node model.nba.player_game_logs_agg_example
+[0m17:38:07.307308 [debug] [Thread-8 (]: Writing injected SQL for node "model.nba.player_game_logs_agg_example"
+[0m17:38:07.309704 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e373810>]}
+[0m17:38:07.311352 [info ] [Thread-1 (]: 1 of 12 OK created sql view model staging.stg_common_player_info ............... [[32mSUCCESS 1[0m in 1.12s]
+[0m17:38:07.312483 [debug] [Thread-8 (]: Began executing node model.nba.player_game_logs_agg_example
+[0m17:38:07.314116 [debug] [Thread-1 (]: Finished running node model.nba.stg_common_player_info
+[0m17:38:07.318487 [debug] [Thread-8 (]: Writing runtime sql for node "model.nba.player_game_logs_agg_example"
+[0m17:38:07.319528 [debug] [Thread-3 (]: Began running node model.nba.fct_players_by_college_example
+[0m17:38:07.320098 [debug] [Thread-7 (]: Began running node model.nba.fct_playoff_games_by_player_example
+[0m17:38:07.323070 [info ] [Thread-3 (]: 8 of 12 START sql table model warehouse.fct_players_by_college_example ......... [RUN]
+[0m17:38:07.324896 [info ] [Thread-7 (]: 9 of 12 START sql table model warehouse.fct_playoff_games_by_player_example .... [RUN]
+[0m17:38:07.328300 [debug] [Thread-8 (]: Using snowflake connection "model.nba.player_game_logs_agg_example"
+[0m17:38:07.329087 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.nba.stg_player_game_logs, now model.nba.fct_players_by_college_example)
+[0m17:38:07.331082 [debug] [Thread-7 (]: Acquiring new snowflake connection 'model.nba.fct_playoff_games_by_player_example'
+[0m17:38:07.333242 [debug] [Thread-8 (]: On model.nba.player_game_logs_agg_example: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.player_game_logs_agg_example"} */
+create or replace   view NBA.intermediate.player_game_logs_agg_example
+  
+   as (
+    -- Aggregate player game logs for regular season games
+WITH player_game_logs_agg AS (
+    SELECT 
+        player_id,
+        player_name,
+        season,
+        game_type,
+        -- Total field goals made by the player
+        SUM(field_goals_made) AS field_goals_made,
+        -- Total field goals attempted by the player
+        SUM(field_goals_attempted) AS field_goals_attempted,
+        -- Field goal percentage using macro
+        
+    CASE 
+        WHEN SUM(field_goals_attempted) = 0 OR SUM(field_goals_attempted) IS NULL THEN 0
+        ELSE ROUND(CAST(SUM(field_goals_made) AS FLOAT) / CAST(SUM(field_goals_attempted) AS FLOAT) * 100, 2)
+    END
+ AS field_goal_pct,
+        -- Total three-point field goals made by the player
+        SUM(three_point_made) AS three_point_made,
+        -- Total three-point field goals attempted by the player
+        SUM(three_point_attempted) AS three_point_attempted,
+        -- Three-point field goal percentage using macro
+        
+    CASE 
+        WHEN SUM(three_point_attempted) = 0 OR SUM(three_point_attempted) IS NULL THEN 0
+        ELSE ROUND(CAST(SUM(three_point_made) AS FLOAT) / CAST(SUM(three_point_attempted) AS FLOAT) * 100, 2)
+    END
+ AS three_point_pct,
+        -- Total free throws made by the player
+        SUM(free_throws_made) AS free_throws_made,
+        -- Total free throws attempted by the player
+        SUM(free_throws_attempted) AS free_throws_attempted,
+        -- Free throw percentage using macro
+        
+    CASE 
+        WHEN SUM(free_throws_attempted) = 0 OR SUM(free_throws_attempted) IS NULL THEN 0
+        ELSE ROUND(CAST(SUM(free_throws_made) AS FLOAT) / CAST(SUM(free_throws_attempted) AS FLOAT) * 100, 2)
+    END
+ AS free_throw_pct,
+        -- Total rebounds grabbed by the player
+        SUM(total_rebounds) AS total_rebounds,
+        -- Total offensive rebounds grabbed by the player
+        SUM(offensive_rebounds) AS offensive_rebounds,
+        -- Total defensive rebounds grabbed by the player
+        SUM(defensive_rebounds) AS defensive_rebounds,
+        -- Total assists made by the player
+        SUM(assists) AS assists,
+        -- Total blocks made by the player
+        SUM(blocks) AS blocks,
+        -- Total steals made by the player
+        SUM(steals) AS steals,
+        -- Total personal fouls committed by the player
+        SUM(personal_fouls) AS personal_fouls,
+        -- Total turnovers committed by the player
+        SUM(turnovers) AS turnovers,
+        -- Total points scored by the player
+        SUM(points) AS total_points,
+        -- Plus-minus statistic for the player
+        AVG(points) AS avg_points,
+        -- Plus-minus statistic for the player 
+        SUM(plus_minus) AS plus_minus,
+        -- Total minutes played by the player
+        SUM(mins_played) AS mins_played,
+        -- Count of losses when the player participated
+        SUM(CASE WHEN win_loss = 'L' THEN 1 ELSE 0 END) AS loss_counter,
+        -- Count of wins when the player participated
+        SUM(CASE WHEN win_loss = 'W' THEN 1 ELSE 0 END) AS win_counter,
+        -- Count of games played (excluding games with 0 minutes played)
+        SUM(CASE WHEN mins_played > 0 THEN 1 ELSE 0 END) AS games_played_counter
+    FROM 
+        -- Reference to the source data table containing player game logs
+        NBA.staging.stg_player_game_logs
+    GROUP BY 
+        player_id, player_name, season, game_type
+)
+
+-- Select all aggregated player game statistics
+SELECT
+    * 
+FROM
+    player_game_logs_agg
+  );
+[0m17:38:07.334806 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c195990>]}
+[0m17:38:07.335496 [debug] [Thread-3 (]: Began compiling node model.nba.fct_players_by_college_example
+[0m17:38:07.337884 [debug] [Thread-7 (]: Began compiling node model.nba.fct_playoff_games_by_player_example
+[0m17:38:07.339711 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m17:38:07.342002 [info ] [Thread-6 (]: 6 of 12 OK created sql view model staging.stg_teams ............................ [[32mSUCCESS 1[0m in 1.14s]
+[0m17:38:07.346766 [debug] [Thread-3 (]: Writing injected SQL for node "model.nba.fct_players_by_college_example"
+[0m17:38:07.352350 [debug] [Thread-7 (]: Writing injected SQL for node "model.nba.fct_playoff_games_by_player_example"
+[0m17:38:07.353938 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff95472190>]}
+[0m17:38:07.356626 [debug] [Thread-6 (]: Finished running node model.nba.stg_teams
+[0m17:38:07.362884 [debug] [Thread-3 (]: Began executing node model.nba.fct_players_by_college_example
+[0m17:38:07.362385 [info ] [Thread-4 (]: 4 of 12 OK created sql view model staging.stg_team_spend_by_season ............. [[32mSUCCESS 1[0m in 1.16s]
+[0m17:38:07.365653 [debug] [Thread-7 (]: Began executing node model.nba.fct_playoff_games_by_player_example
+[0m17:38:07.389672 [debug] [Thread-3 (]: Writing runtime sql for node "model.nba.fct_players_by_college_example"
+[0m17:38:07.390523 [debug] [Thread-4 (]: Finished running node model.nba.stg_team_spend_by_season
+[0m17:38:07.394240 [debug] [Thread-7 (]: Writing runtime sql for node "model.nba.fct_playoff_games_by_player_example"
+[0m17:38:07.395158 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff79f36c10>]}
+[0m17:38:07.402561 [info ] [Thread-2 (]: 2 of 12 OK created sql view model staging.stg_games ............................ [[32mSUCCESS 1[0m in 1.22s]
+[0m17:38:07.400385 [debug] [Thread-3 (]: Using snowflake connection "model.nba.fct_players_by_college_example"
+[0m17:38:07.396692 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c15e350>]}
+[0m17:38:07.405010 [debug] [Thread-7 (]: Using snowflake connection "model.nba.fct_playoff_games_by_player_example"
+[0m17:38:07.405903 [debug] [Thread-2 (]: Finished running node model.nba.stg_games
+[0m17:38:07.407656 [debug] [Thread-3 (]: On model.nba.fct_players_by_college_example: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.fct_players_by_college_example"} */
+create or replace transient table NBA.warehouse.fct_players_by_college_example
+         as
+        (-- The initial Common Table Expression (CTE) aggregates player game logs. It identifies players who have played more than 0 minutes, essentially filtering out players who have no playing time recorded.
+WITH players_by_college AS (
+    SELECT 
+        school,
+        count(*) as player_count
+    FROM 
+        NBA.staging.stg_common_player_info
+    WHERE
+        school is not null -- This ensures that only rows with a non-null school are included
+    GROUP BY
+        school
+    ORDER BY
+        player_count DESC -- This orders the results by the number of players, from highest to lowest
+)
+
+SELECT 
+    *
+FROM 
+    players_by_college
+        );
+[0m17:38:07.409685 [info ] [Thread-5 (]: 5 of 12 OK created sql view model staging.stg_team_stats_by_season ............. [[32mSUCCESS 1[0m in 1.17s]
+[0m17:38:07.411347 [debug] [Thread-7 (]: On model.nba.fct_playoff_games_by_player_example: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.fct_playoff_games_by_player_example"} */
+create or replace transient table NBA.warehouse.fct_playoff_games_by_player_example
+         as
+        (WITH playoff_stats AS (
+    SELECT
+        player_id,
+        player_name,
+        COUNT(*) AS playoff_games,
+        SUM(CASE WHEN win_loss = 'W' THEN 1 ELSE 0 END) AS playoff_wins
+    FROM
+        NBA.staging.stg_player_game_logs
+    WHERE
+        game_type = 'Playoffs'
+    AND
+        mins_played > 0
+    GROUP BY
+        player_id,
+        player_name
+),
+playoff_win_percentage AS (
+    SELECT
+        player_id,
+        player_name,
+        playoff_games,
+        playoff_wins,
+        (CAST(playoff_wins AS FLOAT) / playoff_games) AS win_percentage
+    FROM
+        playoff_stats
+), 
+
+nba_greatest AS (
+    SELECT
+        player_id,
+        greatest_75_member
+    FROM
+        NBA.staging.stg_common_player_info
+),
+
+joined AS (
+    SELECT
+        pwp.*,
+        ng.greatest_75_member
+    FROM 
+        playoff_win_percentage pwp
+    JOIN nba_greatest ng ON
+        pwp.player_id = ng.player_id
+)
+
+SELECT
+    player_id,
+    CASE 
+        WHEN greatest_75_member = 'true' THEN player_name || '*'
+        ELSE player_name
+    END AS player_name,
+    playoff_games,
+    playoff_wins,
+    win_percentage
+FROM
+    joined
+ORDER BY
+    playoff_games DESC, playoff_wins DESC
+        );
+[0m17:38:07.415114 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:38:07.417118 [debug] [Thread-5 (]: Finished running node model.nba.stg_team_stats_by_season
+[0m17:38:07.418841 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m17:38:07.423713 [debug] [Thread-1 (]: Began running node model.nba.fct_playoff_appearances_by_team_example
+[0m17:38:07.427656 [info ] [Thread-1 (]: 10 of 12 START sql table model warehouse.fct_playoff_appearances_by_team_example  [RUN]
+[0m17:38:07.429279 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nba.stg_common_player_info, now model.nba.fct_playoff_appearances_by_team_example)
+[0m17:38:07.431085 [debug] [Thread-1 (]: Began compiling node model.nba.fct_playoff_appearances_by_team_example
+[0m17:38:07.436111 [debug] [Thread-1 (]: Writing injected SQL for node "model.nba.fct_playoff_appearances_by_team_example"
+[0m17:38:07.440716 [debug] [Thread-1 (]: Began executing node model.nba.fct_playoff_appearances_by_team_example
+[0m17:38:07.443745 [debug] [Thread-1 (]: Writing runtime sql for node "model.nba.fct_playoff_appearances_by_team_example"
+[0m17:38:07.449745 [debug] [Thread-1 (]: Using snowflake connection "model.nba.fct_playoff_appearances_by_team_example"
+[0m17:38:07.450463 [debug] [Thread-1 (]: On model.nba.fct_playoff_appearances_by_team_example: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.fct_playoff_appearances_by_team_example"} */
+create or replace transient table NBA.warehouse.fct_playoff_appearances_by_team_example
+         as
+        (-- Calculate playoff appearances and percentages for NBA teams
+
+-- Common Table Expressions (CTEs)
+-- Select relevant team stats and identify the most recent season for each team
+WITH recent_team_stats AS (
+    SELECT
+        team_id,
+        team_name,
+        season,
+        -- Use ROW_NUMBER() to assign a unique rank (rn) to each row within a team's partition
+        -- The rows are ordered by season in descending order for each team
+        -- This ensures that the most recent season gets rn = 1 for each team
+        ROW_NUMBER() OVER (PARTITION BY team_id ORDER BY season DESC) AS rn,
+        -- Check if both playoff_wins and playoff_losses are equal to zero
+        -- If true, set playoff_appearance to 0; otherwise, set it to 1
+        CASE WHEN playoff_wins = 0 AND playoff_losses = 0 THEN 0 ELSE 1 END AS playoff_appearance
+    FROM
+        NBA.staging.stg_team_stats_by_season
+    WHERE 
+        season NOT IN ('2023-2024')
+),
+
+-- Determine the most recent team name for each team
+most_recent_team_names AS (
+    SELECT
+        team_id,
+        team_name
+    FROM
+        recent_team_stats
+    WHERE
+        rn = 1
+),
+
+-- Count seasons played and sum playoff appearances for each team
+seasons_played AS (
+    SELECT
+        team_id,
+        COUNT(team_id) AS seasons_played,
+        SUM(playoff_appearance) AS playoff_appearances
+    FROM
+        recent_team_stats
+    GROUP BY
+        team_id
+),
+
+-- Calculate playoff appearance percentage for each team
+playoff_appearance_pct AS (
+    SELECT 
+        sp.team_id,
+        sp.seasons_played,
+        sp.playoff_appearances,
+        -- Calculate playoff appearance percentage (playoff_appearances / seasons_played)
+        sp.playoff_appearances / sp.seasons_played AS playoff_appearance_pct
+    FROM
+        seasons_played sp
+)
+
+-- Final query to retrieve results
+SELECT 
+    pat.team_id,
+    mrt.team_name,
+    pat.seasons_played,
+    pat.playoff_appearances,
+    pat.playoff_appearance_pct
+FROM
+    playoff_appearance_pct pat
+JOIN
+    most_recent_team_names mrt ON pat.team_id = mrt.team_id
+ORDER BY 
+    pat.playoff_appearances DESC
+        );
+[0m17:38:07.452350 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:38:08.144443 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 0.805 seconds
+[0m17:38:08.146729 [debug] [Thread-8 (]: On model.nba.player_game_logs_agg_example: Close
+[0m17:38:08.669802 [debug] [Thread-8 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e429410>]}
+[0m17:38:08.670845 [info ] [Thread-8 (]: 7 of 12 OK created sql view model intermediate.player_game_logs_agg_example .... [[32mSUCCESS 1[0m in 1.37s]
+[0m17:38:08.672797 [debug] [Thread-8 (]: Finished running node model.nba.player_game_logs_agg_example
+[0m17:38:08.674942 [debug] [Thread-4 (]: Began running node model.nba.fct_player_points_per_playoff_season_example
+[0m17:38:08.675522 [debug] [Thread-2 (]: Began running node model.nba.fct_player_points_per_regular_season_example
+[0m17:38:08.676592 [info ] [Thread-4 (]: 11 of 12 START sql table model warehouse.fct_player_points_per_playoff_season_example  [RUN]
+[0m17:38:08.678455 [info ] [Thread-2 (]: 12 of 12 START sql table model warehouse.fct_player_points_per_regular_season_example  [RUN]
+[0m17:38:08.680358 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.nba.stg_team_spend_by_season, now model.nba.fct_player_points_per_playoff_season_example)
+[0m17:38:08.682216 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.nba.stg_games, now model.nba.fct_player_points_per_regular_season_example)
+[0m17:38:08.684017 [debug] [Thread-4 (]: Began compiling node model.nba.fct_player_points_per_playoff_season_example
+[0m17:38:08.685922 [debug] [Thread-2 (]: Began compiling node model.nba.fct_player_points_per_regular_season_example
+[0m17:38:08.691156 [debug] [Thread-4 (]: Writing injected SQL for node "model.nba.fct_player_points_per_playoff_season_example"
+[0m17:38:08.694566 [debug] [Thread-2 (]: Writing injected SQL for node "model.nba.fct_player_points_per_regular_season_example"
+[0m17:38:08.699049 [debug] [Thread-4 (]: Began executing node model.nba.fct_player_points_per_playoff_season_example
+[0m17:38:08.703513 [debug] [Thread-4 (]: Writing runtime sql for node "model.nba.fct_player_points_per_playoff_season_example"
+[0m17:38:08.704150 [debug] [Thread-2 (]: Began executing node model.nba.fct_player_points_per_regular_season_example
+[0m17:38:08.709120 [debug] [Thread-2 (]: Writing runtime sql for node "model.nba.fct_player_points_per_regular_season_example"
+[0m17:38:08.712615 [debug] [Thread-4 (]: Using snowflake connection "model.nba.fct_player_points_per_playoff_season_example"
+[0m17:38:08.714116 [debug] [Thread-4 (]: On model.nba.fct_player_points_per_playoff_season_example: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.fct_player_points_per_playoff_season_example"} */
+create or replace transient table NBA.warehouse.fct_player_points_per_playoff_season_example
+         as
+        (-- Define a Common Table Expression (CTE) to select player game log details
+WITH source AS (
+    -- Selecting specific columns from the player game logs aggregated example table
+    SELECT 
+        player_id,       -- Unique identifier for each player
+        player_name,     -- Name of the player
+        season,          -- NBA season
+        total_points,    -- Total Points scored by the player
+        avg_points,      -- Average Points scored by the player
+        game_type        -- Type of the game (e.g., "Regular Season", "Playoffs")
+    FROM
+        NBA.intermediate.player_game_logs_agg_example -- Reference to the aggregated player game logs table
+),
+
+-- Define a second CTE to select players with the most points per playoff season
+most_points_per_playoff_season as (
+    SELECT
+        player_id,
+        -- Concatenate player name with season, extracting the last two digits of the season start year
+        -- and removing any spaces, then wrapping the season in parentheses
+        CONCAT(player_name, ' (', REPLACE(SUBSTRING(season, 3, 6), ' ', ''), ')') AS player_season,
+        total_points,
+        avg_points
+    FROM 
+        source
+    WHERE
+        game_type = 'Playoffs' -- Filter the data to include only playoff games
+)
+
+SELECT 
+    *
+FROM 
+    most_points_per_playoff_season
+ORDER BY 
+    total_points DESC
+        );
+[0m17:38:08.715954 [debug] [Thread-2 (]: Using snowflake connection "model.nba.fct_player_points_per_regular_season_example"
+[0m17:38:08.716653 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:38:08.719115 [debug] [Thread-2 (]: On model.nba.fct_player_points_per_regular_season_example: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.fct_player_points_per_regular_season_example"} */
+create or replace transient table NBA.warehouse.fct_player_points_per_regular_season_example
+         as
+        (-- Define a Common Table Expression (CTE) to select player game log details
+WITH source AS (
+    -- Selecting specific columns from the player game logs aggregated example table
+    SELECT 
+        player_id,       -- Unique identifier for each player
+        player_name,     -- Name of the player
+        season,          -- NBA season
+        total_points,    -- Total Points scored by the player
+        avg_points,      -- Average Points scored by the player
+        game_type        -- Type of the game (e.g., "Regular Season", "Playoffs")
+    FROM
+        NBA.intermediate.player_game_logs_agg_example -- Reference to the aggregated player game logs table
+),
+
+-- Define a second CTE to select players with the most points per regular season
+most_points_per_regular_season as (
+    SELECT
+        player_id,
+        -- Concatenate player name with season, extracting the last two digits of the season start year
+        -- and removing any spaces, then wrapping the season in parentheses
+        CONCAT(player_name, ' (', REPLACE(SUBSTRING(season, 3, 6), ' ', ''), ')') AS player_season,
+        total_points,
+        avg_points
+    FROM 
+        source
+    WHERE
+        game_type = 'Regular Season' -- Filter the data to include only regular season games
+)
+
+SELECT 
+    *
+FROM 
+    most_points_per_regular_season
+ORDER BY 
+    total_points DESC
+        );
+[0m17:38:08.723062 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:38:08.778943 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.327 seconds
+[0m17:38:08.781216 [debug] [Thread-1 (]: On model.nba.fct_playoff_appearances_by_team_example: Close
+[0m17:38:08.783796 [debug] [Thread-7 (]: SQL status: SUCCESS 1 in 1.365 seconds
+[0m17:38:08.785838 [debug] [Thread-7 (]: On model.nba.fct_playoff_games_by_player_example: Close
+[0m17:38:08.955503 [debug] [Thread-7 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff79d97790>]}
+[0m17:38:08.956479 [info ] [Thread-7 (]: 9 of 12 OK created sql table model warehouse.fct_playoff_games_by_player_example  [[32mSUCCESS 1[0m in 1.62s]
+[0m17:38:08.958538 [debug] [Thread-7 (]: Finished running node model.nba.fct_playoff_games_by_player_example
+[0m17:38:08.960969 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff79d97790>]}
+[0m17:38:08.962576 [info ] [Thread-1 (]: 10 of 12 OK created sql table model warehouse.fct_playoff_appearances_by_team_example  [[32mSUCCESS 1[0m in 1.53s]
+[0m17:38:08.964493 [debug] [Thread-1 (]: Finished running node model.nba.fct_playoff_appearances_by_team_example
+[0m17:38:09.185967 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.771 seconds
+[0m17:38:09.188153 [debug] [Thread-3 (]: On model.nba.fct_players_by_college_example: Close
+[0m17:38:09.360129 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9463b6d0>]}
+[0m17:38:09.361147 [info ] [Thread-3 (]: 8 of 12 OK created sql table model warehouse.fct_players_by_college_example .... [[32mSUCCESS 1[0m in 2.03s]
+[0m17:38:09.363212 [debug] [Thread-3 (]: Finished running node model.nba.fct_players_by_college_example
+[0m17:38:10.021716 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.305 seconds
+[0m17:38:10.023884 [debug] [Thread-4 (]: On model.nba.fct_player_points_per_playoff_season_example: Close
+[0m17:38:10.128545 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.405 seconds
+[0m17:38:10.130746 [debug] [Thread-2 (]: On model.nba.fct_player_points_per_regular_season_example: Close
+[0m17:38:10.205437 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff79e0b1d0>]}
+[0m17:38:10.206419 [info ] [Thread-4 (]: 11 of 12 OK created sql table model warehouse.fct_player_points_per_playoff_season_example  [[32mSUCCESS 1[0m in 1.52s]
+[0m17:38:10.208519 [debug] [Thread-4 (]: Finished running node model.nba.fct_player_points_per_playoff_season_example
+[0m17:38:10.318591 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c1b2f0e5-fb8c-49f2-a1e2-8441ffa72646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9580c050>]}
+[0m17:38:10.319579 [info ] [Thread-2 (]: 12 of 12 OK created sql table model warehouse.fct_player_points_per_regular_season_example  [[32mSUCCESS 1[0m in 1.64s]
+[0m17:38:10.321582 [debug] [Thread-2 (]: Finished running node model.nba.fct_player_points_per_regular_season_example
+[0m17:38:10.324697 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:38:10.325224 [debug] [MainThread]: Connection 'model.nba.fct_playoff_appearances_by_team_example' was properly closed.
+[0m17:38:10.327079 [debug] [MainThread]: Connection 'model.nba.fct_player_points_per_regular_season_example' was properly closed.
+[0m17:38:10.328947 [debug] [MainThread]: Connection 'model.nba.fct_players_by_college_example' was properly closed.
+[0m17:38:10.330804 [debug] [MainThread]: Connection 'model.nba.fct_player_points_per_playoff_season_example' was properly closed.
+[0m17:38:10.332599 [debug] [MainThread]: Connection 'model.nba.stg_teams' was properly closed.
+[0m17:38:10.334453 [debug] [MainThread]: Connection 'model.nba.stg_team_stats_by_season' was properly closed.
+[0m17:38:10.336250 [debug] [MainThread]: Connection 'model.nba.player_game_logs_agg_example' was properly closed.
+[0m17:38:10.338190 [debug] [MainThread]: Connection 'model.nba.fct_playoff_games_by_player_example' was properly closed.
+[0m17:38:10.340334 [info ] [MainThread]: 
+[0m17:38:10.341962 [info ] [MainThread]: Finished running 7 view models, 5 table models in 0 hours 0 minutes and 6.15 seconds (6.15s).
+[0m17:38:10.345402 [debug] [MainThread]: Command end result
+[0m17:38:10.396811 [info ] [MainThread]: 
+[0m17:38:10.397570 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:38:10.399506 [info ] [MainThread]: 
+[0m17:38:10.401452 [info ] [MainThread]: Done. PASS=12 WARN=0 ERROR=0 SKIP=0 TOTAL=12
+[0m17:38:10.404066 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.9375997, "process_user_time": 3.850621, "process_kernel_time": 0.458175, "process_mem_max_rss": "239724", "process_in_blocks": "1120", "process_out_blocks": "4704"}
+[0m17:38:10.405583 [debug] [MainThread]: Command `dbt run` succeeded at 17:38:10.405437 after 7.94 seconds
+[0m17:38:10.407309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9429f750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c1940d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e39a610>]}
+[0m17:38:10.409115 [debug] [MainThread]: Flushing usage events
+[0m17:38:16.587468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabe9e210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabed4910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabee7850>]}
+
+
+============================== 17:38:16.590743 | 09ec1b31-b78a-4711-b3ec-74525e23d108 ==============================
+[0m17:38:16.590743 [info ] [MainThread]: Running with dbt=1.8.7
+[0m17:38:16.592854 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/workspaces/fxtn7c3oiwkalwzz', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/workspaces/fxtn7c3oiwkalwzz/repository/nba/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m17:38:17.621067 [info ] [MainThread]: Initializing dbt-loom=0.7.0
+[0m17:38:17.621876 [info ] [MainThread]: dbt-loom: Patching ref protection methods to support dbt-loom dependencies.
+[0m17:38:17.624111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '09ec1b31-b78a-4711-b3ec-74525e23d108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa14898d0>]}
+[0m17:38:17.696284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '09ec1b31-b78a-4711-b3ec-74525e23d108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac253cd0>]}
+[0m17:38:17.697374 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m17:38:17.833325 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m17:38:17.988283 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:38:17.988921 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:38:17.991109 [info ] [MainThread]: dbt-loom: Injecting nodes
+[0m17:38:18.042946 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '09ec1b31-b78a-4711-b3ec-74525e23d108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96079b10>]}
+[0m17:38:18.187455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '09ec1b31-b78a-4711-b3ec-74525e23d108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff939dfe50>]}
+[0m17:38:18.188278 [info ] [MainThread]: Found 12 models, 3 data tests, 7 sources, 1 exposure, 461 macros
+[0m17:38:18.190116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '09ec1b31-b78a-4711-b3ec-74525e23d108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff939b2510>]}
+[0m17:38:18.193546 [info ] [MainThread]: 
+[0m17:38:18.194450 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m17:38:18.201327 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA_staging'
+[0m17:38:18.202238 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA_intermediate'
+[0m17:38:18.224027 [debug] [ThreadPool]: Using snowflake connection "list_NBA_intermediate"
+[0m17:38:18.221244 [debug] [ThreadPool]: Using snowflake connection "list_NBA_staging"
+[0m17:38:18.226618 [debug] [ThreadPool]: On list_NBA_staging: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_staging"} */
+show objects in NBA.staging limit 10000
+[0m17:38:18.202997 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA_warehouse'
+[0m17:38:18.224629 [debug] [ThreadPool]: On list_NBA_intermediate: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_intermediate"} */
+show objects in NBA.intermediate limit 10000
+[0m17:38:18.228584 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:38:18.233903 [debug] [ThreadPool]: Using snowflake connection "list_NBA_warehouse"
+[0m17:38:18.234558 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:38:18.239881 [debug] [ThreadPool]: On list_NBA_warehouse: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_warehouse"} */
+show objects in NBA.warehouse limit 10000
+[0m17:38:18.243429 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:38:18.787573 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.559 seconds
+[0m17:38:18.789952 [debug] [ThreadPool]: On list_NBA_staging: Close
+[0m17:38:18.824504 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.590 seconds
+[0m17:38:18.826546 [debug] [ThreadPool]: On list_NBA_intermediate: Close
+[0m17:38:18.833506 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.590 seconds
+[0m17:38:18.835609 [debug] [ThreadPool]: On list_NBA_warehouse: Close
+[0m17:38:19.032504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '09ec1b31-b78a-4711-b3ec-74525e23d108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff939e7dd0>]}
+[0m17:38:19.033382 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m17:38:19.035306 [info ] [MainThread]: 
+[0m17:38:19.040011 [debug] [Thread-1 (]: Began running node test.nba.not_null_full_name.c6333fefa5
+[0m17:38:19.040622 [debug] [Thread-2 (]: Began running node test.nba.not_null_player_id.95d0092ba8
+[0m17:38:19.043843 [info ] [Thread-2 (]: 2 of 3 START test not_null_player_id ........................................... [RUN]
+[0m17:38:19.041906 [info ] [Thread-1 (]: 1 of 3 START test not_null_full_name ........................................... [RUN]
+[0m17:38:19.041223 [debug] [Thread-3 (]: Began running node test.nba.unique_player_id.fddfbe56a2
+[0m17:38:19.045866 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_NBA_intermediate, now test.nba.not_null_player_id.95d0092ba8)
+[0m17:38:19.051313 [debug] [Thread-2 (]: Began compiling node test.nba.not_null_player_id.95d0092ba8
+[0m17:38:19.049485 [info ] [Thread-3 (]: 3 of 3 START test unique_player_id ............................................. [RUN]
+[0m17:38:19.048343 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_NBA_warehouse, now test.nba.not_null_full_name.c6333fefa5)
+[0m17:38:19.066609 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_NBA_staging, now test.nba.unique_player_id.fddfbe56a2)
+[0m17:38:19.068440 [debug] [Thread-1 (]: Began compiling node test.nba.not_null_full_name.c6333fefa5
+[0m17:38:19.070369 [debug] [Thread-3 (]: Began compiling node test.nba.unique_player_id.fddfbe56a2
+[0m17:38:19.072478 [debug] [Thread-2 (]: Compilation Error in test not_null_player_id (models/staging/schema.yml)
+  macro 'dbt_macro__test_not_null' takes no keyword argument 'description'
+[0m17:38:19.086912 [debug] [Thread-1 (]: Compilation Error in test not_null_full_name (models/staging/schema.yml)
+  macro 'dbt_macro__test_not_null' takes no keyword argument 'description'
+[0m17:38:19.087763 [error] [Thread-2 (]: 2 of 3 ERROR not_null_player_id ................................................ [[31mERROR[0m in 0.04s]
+[0m17:38:19.089051 [debug] [Thread-3 (]: Compilation Error in test unique_player_id (models/staging/schema.yml)
+  macro 'dbt_macro__test_unique' takes no keyword argument 'description'
+[0m17:38:19.089731 [error] [Thread-1 (]: 1 of 3 ERROR not_null_full_name ................................................ [[31mERROR[0m in 0.04s]
+[0m17:38:19.091731 [debug] [Thread-2 (]: Finished running node test.nba.not_null_player_id.95d0092ba8
+[0m17:38:19.093523 [error] [Thread-3 (]: 3 of 3 ERROR unique_player_id .................................................. [[31mERROR[0m in 0.03s]
+[0m17:38:19.095403 [debug] [Thread-1 (]: Finished running node test.nba.not_null_full_name.c6333fefa5
+[0m17:38:19.099083 [debug] [Thread-3 (]: Finished running node test.nba.unique_player_id.fddfbe56a2
+[0m17:38:19.103714 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:38:19.105028 [debug] [MainThread]: Connection 'test.nba.unique_player_id.fddfbe56a2' was properly closed.
+[0m17:38:19.106889 [debug] [MainThread]: Connection 'test.nba.not_null_player_id.95d0092ba8' was properly closed.
+[0m17:38:19.108706 [debug] [MainThread]: Connection 'test.nba.not_null_full_name.c6333fefa5' was properly closed.
+[0m17:38:19.110597 [info ] [MainThread]: 
+[0m17:38:19.112459 [info ] [MainThread]: Finished running 3 data tests in 0 hours 0 minutes and 0.92 seconds (0.92s).
+[0m17:38:19.114741 [debug] [MainThread]: Command end result
+[0m17:38:19.241663 [info ] [MainThread]: 
+[0m17:38:19.242446 [info ] [MainThread]: [31mCompleted with 3 errors and 0 warnings:[0m
+[0m17:38:19.244430 [info ] [MainThread]: 
+[0m17:38:19.246496 [error] [MainThread]:   Compilation Error in test not_null_player_id (models/staging/schema.yml)
+  macro 'dbt_macro__test_not_null' takes no keyword argument 'description'
+[0m17:38:19.248329 [info ] [MainThread]: 
+[0m17:38:19.250351 [error] [MainThread]:   Compilation Error in test not_null_full_name (models/staging/schema.yml)
+  macro 'dbt_macro__test_not_null' takes no keyword argument 'description'
+[0m17:38:19.252213 [info ] [MainThread]: 
+[0m17:38:19.254759 [error] [MainThread]:   Compilation Error in test unique_player_id (models/staging/schema.yml)
+  macro 'dbt_macro__test_unique' takes no keyword argument 'description'
+[0m17:38:19.256617 [info ] [MainThread]: 
+[0m17:38:19.258500 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=0 TOTAL=3
+[0m17:38:19.261174 [debug] [MainThread]: Resource report: {"command_name": "test", "command_wall_clock_time": 2.732874, "process_user_time": 3.196189, "process_kernel_time": 0.318623, "process_mem_max_rss": "234568", "process_in_blocks": "144", "process_out_blocks": "2944", "command_success": false}
+[0m17:38:19.262713 [debug] [MainThread]: Command `dbt test` failed at 17:38:19.262568 after 2.73 seconds
+[0m17:38:19.264476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad72cb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff901e2390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93f4db50>]}
+[0m17:38:19.266287 [debug] [MainThread]: Flushing usage events
