@@ -6085,3 +6085,558 @@ having count(*) > 1
 [0m17:54:32.715230 [debug] [MainThread]: Command `dbt test` succeeded at 17:54:32.715082 after 3.68 seconds
 [0m17:54:32.717065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff99477c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff979d2fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff94f67650>]}
 [0m17:54:32.719000 [debug] [MainThread]: Flushing usage events
+[0m17:55:33.877288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b010210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b1c3c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b1c3ed0>]}
+
+
+============================== 17:55:33.880743 | b480f1d0-2b34-4ff1-bc5e-c97d95458bac ==============================
+[0m17:55:33.880743 [info ] [MainThread]: Running with dbt=1.8.7
+[0m17:55:33.882843 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/workspaces/fxtn7c3oiwkalwzz', 'log_path': '/workspaces/fxtn7c3oiwkalwzz/repository/nba/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt docs generate', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:55:34.924110 [info ] [MainThread]: Initializing dbt-loom=0.7.0
+[0m17:55:34.924944 [info ] [MainThread]: dbt-loom: Patching ref protection methods to support dbt-loom dependencies.
+[0m17:55:34.927300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b480f1d0-2b34-4ff1-bc5e-c97d95458bac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7300a750>]}
+[0m17:55:34.999592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b480f1d0-2b34-4ff1-bc5e-c97d95458bac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c279d10>]}
+[0m17:55:35.000764 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m17:55:35.135972 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m17:55:35.290767 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:55:35.291408 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:55:35.293647 [info ] [MainThread]: dbt-loom: Injecting nodes
+[0m17:55:35.345595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b480f1d0-2b34-4ff1-bc5e-c97d95458bac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff73008750>]}
+[0m17:55:35.375654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b480f1d0-2b34-4ff1-bc5e-c97d95458bac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff72e2f350>]}
+[0m17:55:35.376469 [info ] [MainThread]: Found 12 models, 3 data tests, 7 sources, 1 exposure, 461 macros
+[0m17:55:35.379719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b480f1d0-2b34-4ff1-bc5e-c97d95458bac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff72c27990>]}
+[0m17:55:35.383722 [info ] [MainThread]: 
+[0m17:55:35.384613 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m17:55:35.391641 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA_staging'
+[0m17:55:35.411399 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA_warehouse'
+[0m17:55:35.413810 [debug] [ThreadPool]: Using snowflake connection "list_NBA_staging"
+[0m17:55:35.417929 [debug] [ThreadPool]: On list_NBA_staging: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_staging"} */
+show objects in NBA.staging limit 10000
+[0m17:55:35.420221 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:55:35.414654 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA_intermediate'
+[0m17:55:35.417328 [debug] [ThreadPool]: Using snowflake connection "list_NBA_warehouse"
+[0m17:55:35.427697 [debug] [ThreadPool]: Using snowflake connection "list_NBA_intermediate"
+[0m17:55:35.428364 [debug] [ThreadPool]: On list_NBA_warehouse: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_warehouse"} */
+show objects in NBA.warehouse limit 10000
+[0m17:55:35.432310 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:55:35.430344 [debug] [ThreadPool]: On list_NBA_intermediate: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_intermediate"} */
+show objects in NBA.intermediate limit 10000
+[0m17:55:35.440673 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:55:35.980302 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.540 seconds
+[0m17:55:35.983098 [debug] [ThreadPool]: On list_NBA_intermediate: Close
+[0m17:55:35.997457 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.565 seconds
+[0m17:55:35.999686 [debug] [ThreadPool]: On list_NBA_warehouse: Close
+[0m17:55:36.241674 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.821 seconds
+[0m17:55:36.243888 [debug] [ThreadPool]: On list_NBA_staging: Close
+[0m17:55:36.435914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b480f1d0-2b34-4ff1-bc5e-c97d95458bac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff72fd6990>]}
+[0m17:55:36.436746 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m17:55:36.438505 [info ] [MainThread]: 
+[0m17:55:36.450348 [debug] [Thread-1 (]: Began running node model.nba.stg_common_player_info
+[0m17:55:36.451048 [debug] [Thread-2 (]: Began running node model.nba.stg_games
+[0m17:55:36.456107 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_NBA_intermediate, now model.nba.stg_games)
+[0m17:55:36.457727 [debug] [Thread-2 (]: Began compiling node model.nba.stg_games
+[0m17:55:36.453010 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_NBA_warehouse, now model.nba.stg_common_player_info)
+[0m17:55:36.455440 [debug] [Thread-6 (]: Began running node model.nba.stg_teams
+[0m17:55:36.451702 [debug] [Thread-3 (]: Began running node model.nba.stg_player_game_logs
+[0m17:55:36.472618 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_NBA_staging, now model.nba.stg_player_game_logs)
+[0m17:55:36.454332 [debug] [Thread-5 (]: Began running node model.nba.stg_team_stats_by_season
+[0m17:55:36.467783 [debug] [Thread-2 (]: Writing injected SQL for node "model.nba.stg_games"
+[0m17:55:36.468520 [debug] [Thread-1 (]: Began compiling node model.nba.stg_common_player_info
+[0m17:55:36.483542 [debug] [Thread-1 (]: Writing injected SQL for node "model.nba.stg_common_player_info"
+[0m17:55:36.456953 [debug] [Thread-4 (]: Began running node model.nba.stg_team_spend_by_season
+[0m17:55:36.474378 [debug] [Thread-3 (]: Began compiling node model.nba.stg_player_game_logs
+[0m17:55:36.476723 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.nba.stg_team_stats_by_season'
+[0m17:55:36.494714 [debug] [Thread-5 (]: Began compiling node model.nba.stg_team_stats_by_season
+[0m17:55:36.486430 [debug] [Thread-2 (]: Began executing node model.nba.stg_games
+[0m17:55:36.501570 [debug] [Thread-2 (]: Finished running node model.nba.stg_games
+[0m17:55:36.493472 [debug] [Thread-3 (]: Writing injected SQL for node "model.nba.stg_player_game_logs"
+[0m17:55:36.494112 [debug] [Thread-1 (]: Began executing node model.nba.stg_common_player_info
+[0m17:55:36.507450 [debug] [Thread-1 (]: Finished running node model.nba.stg_common_player_info
+[0m17:55:36.500345 [debug] [Thread-5 (]: Writing injected SQL for node "model.nba.stg_team_stats_by_season"
+[0m17:55:36.488457 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.nba.stg_team_spend_by_season'
+[0m17:55:36.470862 [debug] [Thread-6 (]: Acquiring new snowflake connection 'model.nba.stg_teams'
+[0m17:55:36.509778 [debug] [Thread-8 (]: Began running node model.nba.fct_players_by_college_example
+[0m17:55:36.510497 [debug] [Thread-7 (]: Began running node test.nba.not_null_full_name.26df58b172
+[0m17:55:36.511111 [debug] [Thread-3 (]: Began executing node model.nba.stg_player_game_logs
+[0m17:55:36.511687 [debug] [Thread-2 (]: Began running node test.nba.not_null_player_id.2d6184285e
+[0m17:55:36.512219 [debug] [Thread-1 (]: Began running node test.nba.unique_player_id.489f92cfc7
+[0m17:55:36.528992 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nba.stg_common_player_info, now test.nba.unique_player_id.489f92cfc7)
+[0m17:55:36.531044 [debug] [Thread-1 (]: Began compiling node test.nba.unique_player_id.489f92cfc7
+[0m17:55:36.517369 [debug] [Thread-5 (]: Began executing node model.nba.stg_team_stats_by_season
+[0m17:55:36.544756 [debug] [Thread-5 (]: Finished running node model.nba.stg_team_stats_by_season
+[0m17:55:36.522320 [debug] [Thread-7 (]: Acquiring new snowflake connection 'test.nba.not_null_full_name.26df58b172'
+[0m17:55:36.548419 [debug] [Thread-7 (]: Began compiling node test.nba.not_null_full_name.26df58b172
+[0m17:55:36.527032 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.nba.stg_games, now test.nba.not_null_player_id.2d6184285e)
+[0m17:55:36.514773 [debug] [Thread-4 (]: Began compiling node model.nba.stg_team_spend_by_season
+[0m17:55:36.566810 [debug] [Thread-4 (]: Writing injected SQL for node "model.nba.stg_team_spend_by_season"
+[0m17:55:36.519559 [debug] [Thread-8 (]: Acquiring new snowflake connection 'model.nba.fct_players_by_college_example'
+[0m17:55:36.543428 [debug] [Thread-1 (]: Writing injected SQL for node "test.nba.unique_player_id.489f92cfc7"
+[0m17:55:36.546867 [debug] [Thread-5 (]: Began running node model.nba.fct_playoff_appearances_by_team_example
+[0m17:55:36.576311 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.nba.stg_team_stats_by_season, now model.nba.fct_playoff_appearances_by_team_example)
+[0m17:55:36.578572 [debug] [Thread-5 (]: Began compiling node model.nba.fct_playoff_appearances_by_team_example
+[0m17:55:36.560950 [debug] [Thread-7 (]: Writing injected SQL for node "test.nba.not_null_full_name.26df58b172"
+[0m17:55:36.516812 [debug] [Thread-6 (]: Began compiling node model.nba.stg_teams
+[0m17:55:36.593514 [debug] [Thread-6 (]: Writing injected SQL for node "model.nba.stg_teams"
+[0m17:55:36.574336 [debug] [Thread-4 (]: Began executing node model.nba.stg_team_spend_by_season
+[0m17:55:36.599246 [debug] [Thread-4 (]: Finished running node model.nba.stg_team_spend_by_season
+[0m17:55:36.561400 [debug] [Thread-2 (]: Began compiling node test.nba.not_null_player_id.2d6184285e
+[0m17:55:36.579174 [debug] [Thread-1 (]: Began executing node test.nba.unique_player_id.489f92cfc7
+[0m17:55:36.585906 [debug] [Thread-5 (]: Writing injected SQL for node "model.nba.fct_playoff_appearances_by_team_example"
+[0m17:55:36.571400 [debug] [Thread-8 (]: Began compiling node model.nba.fct_players_by_college_example
+[0m17:55:36.596236 [debug] [Thread-7 (]: Began executing node test.nba.not_null_full_name.26df58b172
+[0m17:55:36.525484 [debug] [Thread-3 (]: Finished running node model.nba.stg_player_game_logs
+[0m17:55:36.602664 [debug] [Thread-6 (]: Began executing node model.nba.stg_teams
+[0m17:55:36.624065 [debug] [Thread-6 (]: Finished running node model.nba.stg_teams
+[0m17:55:36.612314 [debug] [Thread-2 (]: Writing injected SQL for node "test.nba.not_null_player_id.2d6184285e"
+[0m17:55:36.618415 [debug] [Thread-8 (]: Writing injected SQL for node "model.nba.fct_players_by_college_example"
+[0m17:55:36.619626 [debug] [Thread-7 (]: Finished running node test.nba.not_null_full_name.26df58b172
+[0m17:55:36.621861 [debug] [Thread-4 (]: Began running node model.nba.fct_playoff_games_by_player_example
+[0m17:55:36.622587 [debug] [Thread-3 (]: Began running node model.nba.player_game_logs_agg_example
+[0m17:55:36.636892 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.nba.stg_player_game_logs, now model.nba.player_game_logs_agg_example)
+[0m17:55:36.609565 [debug] [Thread-1 (]: Finished running node test.nba.unique_player_id.489f92cfc7
+[0m17:55:36.632598 [debug] [Thread-2 (]: Began executing node test.nba.not_null_player_id.2d6184285e
+[0m17:55:36.643572 [debug] [Thread-2 (]: Finished running node test.nba.not_null_player_id.2d6184285e
+[0m17:55:36.634860 [debug] [Thread-8 (]: Began executing node model.nba.fct_players_by_college_example
+[0m17:55:36.623086 [debug] [Thread-5 (]: Began executing node model.nba.fct_playoff_appearances_by_team_example
+[0m17:55:36.639542 [debug] [Thread-3 (]: Began compiling node model.nba.player_game_logs_agg_example
+[0m17:55:36.656209 [debug] [Thread-3 (]: Writing injected SQL for node "model.nba.player_game_logs_agg_example"
+[0m17:55:36.647594 [debug] [Thread-8 (]: Finished running node model.nba.fct_players_by_college_example
+[0m17:55:36.649786 [debug] [Thread-5 (]: Finished running node model.nba.fct_playoff_appearances_by_team_example
+[0m17:55:36.634212 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.nba.stg_team_spend_by_season, now model.nba.fct_playoff_games_by_player_example)
+[0m17:55:36.663218 [debug] [Thread-4 (]: Began compiling node model.nba.fct_playoff_games_by_player_example
+[0m17:55:36.661759 [debug] [Thread-3 (]: Began executing node model.nba.player_game_logs_agg_example
+[0m17:55:36.669527 [debug] [Thread-4 (]: Writing injected SQL for node "model.nba.fct_playoff_games_by_player_example"
+[0m17:55:36.670647 [debug] [Thread-3 (]: Finished running node model.nba.player_game_logs_agg_example
+[0m17:55:36.675330 [debug] [Thread-6 (]: Began running node model.nba.fct_player_points_per_playoff_season_example
+[0m17:55:36.675940 [debug] [Thread-7 (]: Began running node model.nba.fct_player_points_per_regular_season_example
+[0m17:55:36.679912 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly test.nba.not_null_full_name.26df58b172, now model.nba.fct_player_points_per_regular_season_example)
+[0m17:55:36.681946 [debug] [Thread-7 (]: Began compiling node model.nba.fct_player_points_per_regular_season_example
+[0m17:55:36.676962 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly model.nba.stg_teams, now model.nba.fct_player_points_per_playoff_season_example)
+[0m17:55:36.678473 [debug] [Thread-4 (]: Began executing node model.nba.fct_playoff_games_by_player_example
+[0m17:55:36.691991 [debug] [Thread-4 (]: Finished running node model.nba.fct_playoff_games_by_player_example
+[0m17:55:36.689607 [debug] [Thread-6 (]: Began compiling node model.nba.fct_player_points_per_playoff_season_example
+[0m17:55:36.698947 [debug] [Thread-6 (]: Writing injected SQL for node "model.nba.fct_player_points_per_playoff_season_example"
+[0m17:55:36.686771 [debug] [Thread-7 (]: Writing injected SQL for node "model.nba.fct_player_points_per_regular_season_example"
+[0m17:55:36.704180 [debug] [Thread-6 (]: Began executing node model.nba.fct_player_points_per_playoff_season_example
+[0m17:55:36.705224 [debug] [Thread-6 (]: Finished running node model.nba.fct_player_points_per_playoff_season_example
+[0m17:55:36.715495 [debug] [Thread-7 (]: Began executing node model.nba.fct_player_points_per_regular_season_example
+[0m17:55:36.716583 [debug] [Thread-7 (]: Finished running node model.nba.fct_player_points_per_regular_season_example
+[0m17:55:36.721398 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:55:36.722799 [debug] [MainThread]: Connection 'model.nba.player_game_logs_agg_example' was properly closed.
+[0m17:55:36.725189 [debug] [MainThread]: Connection 'test.nba.unique_player_id.489f92cfc7' was properly closed.
+[0m17:55:36.727007 [debug] [MainThread]: Connection 'test.nba.not_null_player_id.2d6184285e' was properly closed.
+[0m17:55:36.729135 [debug] [MainThread]: Connection 'model.nba.fct_player_points_per_playoff_season_example' was properly closed.
+[0m17:55:36.730978 [debug] [MainThread]: Connection 'model.nba.fct_playoff_appearances_by_team_example' was properly closed.
+[0m17:55:36.732943 [debug] [MainThread]: Connection 'model.nba.fct_playoff_games_by_player_example' was properly closed.
+[0m17:55:36.734950 [debug] [MainThread]: Connection 'model.nba.fct_players_by_college_example' was properly closed.
+[0m17:55:36.737012 [debug] [MainThread]: Connection 'model.nba.fct_player_points_per_regular_season_example' was properly closed.
+[0m17:55:36.741369 [debug] [MainThread]: Command end result
+[0m17:55:36.884334 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m17:55:36.884973 [info ] [MainThread]: Building catalog
+[0m17:55:36.899025 [debug] [ThreadPool]: Acquiring new snowflake connection 'NBA.information_schema'
+[0m17:55:37.007136 [debug] [ThreadPool]: Using snowflake connection "NBA.information_schema"
+[0m17:55:37.008419 [debug] [ThreadPool]: On NBA.information_schema: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "NBA.information_schema"} */
+with tables as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        case
+            when is_dynamic = 'YES' and table_type = 'BASE TABLE' THEN 'DYNAMIC TABLE'
+            else table_type
+        end as "table_type",
+        comment as "table_comment",
+
+        -- note: this is the _role_ that owns the table
+        table_owner as "table_owner",
+
+        'Clustering Key' as "stats:clustering_key:label",
+        clustering_key as "stats:clustering_key:value",
+        'The key used to cluster this table' as "stats:clustering_key:description",
+        (clustering_key is not null) as "stats:clustering_key:include",
+
+        'Row Count' as "stats:row_count:label",
+        row_count as "stats:row_count:value",
+        'An approximate count of rows in this table' as "stats:row_count:description",
+        (row_count is not null) as "stats:row_count:include",
+
+        'Approximate Size' as "stats:bytes:label",
+        bytes as "stats:bytes:value",
+        'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+        (bytes is not null) as "stats:bytes:include",
+
+        'Last Modified' as "stats:last_modified:label",
+        to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+        'The timestamp for last update/change' as "stats:last_modified:description",
+        (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+    from NBA.INFORMATION_SCHEMA.tables
+            where (
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_games' and upper("table_name") = upper('stg_games')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'warehouse' and upper("table_schema") = upper('warehouse')
+
+                    and 
+    "table_name" ilike 'fct_playoff_games_by_player_example' and upper("table_name") = upper('fct_playoff_games_by_player_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'PLAYER_GAME_LOGS' and upper("table_name") = upper('PLAYER_GAME_LOGS')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'TEAM_SPEND_BY_SEASON' and upper("table_name") = upper('TEAM_SPEND_BY_SEASON')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_player_game_logs' and upper("table_name") = upper('stg_player_game_logs')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_team_stats_by_season' and upper("table_name") = upper('stg_team_stats_by_season')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'warehouse' and upper("table_schema") = upper('warehouse')
+
+                    and 
+    "table_name" ilike 'fct_playoff_appearances_by_team_example' and upper("table_name") = upper('fct_playoff_appearances_by_team_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'GAMES' and upper("table_name") = upper('GAMES')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'warehouse' and upper("table_schema") = upper('warehouse')
+
+                    and 
+    "table_name" ilike 'fct_player_points_per_playoff_season_example' and upper("table_name") = upper('fct_player_points_per_playoff_season_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'warehouse' and upper("table_schema") = upper('warehouse')
+
+                    and 
+    "table_name" ilike 'fct_players_by_college_example' and upper("table_name") = upper('fct_players_by_college_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'warehouse' and upper("table_schema") = upper('warehouse')
+
+                    and 
+    "table_name" ilike 'fct_player_points_per_regular_season_example' and upper("table_name") = upper('fct_player_points_per_regular_season_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'COMMON_PLAYER_INFO' and upper("table_name") = upper('COMMON_PLAYER_INFO')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_common_player_info' and upper("table_name") = upper('stg_common_player_info')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_team_spend_by_season' and upper("table_name") = upper('stg_team_spend_by_season')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'TEAMS' and upper("table_name") = upper('TEAMS')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'intermediate' and upper("table_schema") = upper('intermediate')
+
+                    and 
+    "table_name" ilike 'player_game_logs_agg_example' and upper("table_name") = upper('player_game_logs_agg_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_teams' and upper("table_name") = upper('stg_teams')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'PLAYER_SALARIES_BY_SEASON' and upper("table_name") = upper('PLAYER_SALARIES_BY_SEASON')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'TEAM_STATS_BY_SEASON' and upper("table_name") = upper('TEAM_STATS_BY_SEASON')
+
+                )
+            )
+        ),
+        columns as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+
+        column_name as "column_name",
+        ordinal_position as "column_index",
+        data_type as "column_type",
+        comment as "column_comment"
+    from NBA.INFORMATION_SCHEMA.columns
+            where (
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_games' and upper("table_name") = upper('stg_games')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'warehouse' and upper("table_schema") = upper('warehouse')
+
+                    and 
+    "table_name" ilike 'fct_playoff_games_by_player_example' and upper("table_name") = upper('fct_playoff_games_by_player_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'PLAYER_GAME_LOGS' and upper("table_name") = upper('PLAYER_GAME_LOGS')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'TEAM_SPEND_BY_SEASON' and upper("table_name") = upper('TEAM_SPEND_BY_SEASON')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_player_game_logs' and upper("table_name") = upper('stg_player_game_logs')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_team_stats_by_season' and upper("table_name") = upper('stg_team_stats_by_season')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'warehouse' and upper("table_schema") = upper('warehouse')
+
+                    and 
+    "table_name" ilike 'fct_playoff_appearances_by_team_example' and upper("table_name") = upper('fct_playoff_appearances_by_team_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'GAMES' and upper("table_name") = upper('GAMES')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'warehouse' and upper("table_schema") = upper('warehouse')
+
+                    and 
+    "table_name" ilike 'fct_player_points_per_playoff_season_example' and upper("table_name") = upper('fct_player_points_per_playoff_season_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'warehouse' and upper("table_schema") = upper('warehouse')
+
+                    and 
+    "table_name" ilike 'fct_players_by_college_example' and upper("table_name") = upper('fct_players_by_college_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'warehouse' and upper("table_schema") = upper('warehouse')
+
+                    and 
+    "table_name" ilike 'fct_player_points_per_regular_season_example' and upper("table_name") = upper('fct_player_points_per_regular_season_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'COMMON_PLAYER_INFO' and upper("table_name") = upper('COMMON_PLAYER_INFO')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_common_player_info' and upper("table_name") = upper('stg_common_player_info')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_team_spend_by_season' and upper("table_name") = upper('stg_team_spend_by_season')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'TEAMS' and upper("table_name") = upper('TEAMS')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'intermediate' and upper("table_schema") = upper('intermediate')
+
+                    and 
+    "table_name" ilike 'player_game_logs_agg_example' and upper("table_name") = upper('player_game_logs_agg_example')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'staging' and upper("table_schema") = upper('staging')
+
+                    and 
+    "table_name" ilike 'stg_teams' and upper("table_name") = upper('stg_teams')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'PLAYER_SALARIES_BY_SEASON' and upper("table_name") = upper('PLAYER_SALARIES_BY_SEASON')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'TEAM_STATS_BY_SEASON' and upper("table_name") = upper('TEAM_STATS_BY_SEASON')
+
+                )
+            )
+        )
+        select *
+    from tables
+    join columns using ("table_database", "table_schema", "table_name")
+    order by "column_index"
+[0m17:55:37.010565 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:55:43.866355 [debug] [ThreadPool]: SQL status: SUCCESS 340 in 6.856 seconds
+[0m17:55:44.155246 [debug] [ThreadPool]: On NBA.information_schema: Close
+[0m17:55:44.460887 [info ] [MainThread]: Catalog written to /workspaces/fxtn7c3oiwkalwzz/repository/nba/target/catalog.json
+[0m17:55:44.462664 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 10.648215, "process_user_time": 3.57691, "process_kernel_time": 0.293023, "process_mem_max_rss": "235460", "process_out_blocks": "6848", "process_in_blocks": "0"}
+[0m17:55:44.464312 [debug] [MainThread]: Command `dbt docs generate` succeeded at 17:55:44.464159 after 10.65 seconds
+[0m17:55:44.465905 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m17:55:44.467776 [debug] [MainThread]: Connection 'NBA.information_schema' was properly closed.
+[0m17:55:44.469728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b05afd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff791e6a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b4e5290>]}
+[0m17:55:44.471599 [debug] [MainThread]: Flushing usage events
