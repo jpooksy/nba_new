@@ -5,6 +5,16 @@ models:
       This table contains non-statistical information about NBA players from
       1946 - 2023. Sourced from the NBA API.  This data set comes from the
       official NBA API. You can learn more here: https://github.com/swar/nba_api
+    tests:
+      - unique:
+          column_name: player_id
+          name: unique_player_id
+      - not_null:
+          column_name: player_id
+          name: not_null_player_id
+      - not_null:
+          column_name: full_name
+          name: not_null_full_name
     columns:
       - name: player_id
         description: Unique identifier for the player.

@@ -1,4 +1,8 @@
--- Aggregate player game logs for regular season games
+
+  create or replace   view NBA.intermediate.player_game_logs_agg_example
+  
+   as (
+    -- Aggregate player game logs for regular season games
 WITH player_game_logs_agg AS (
     SELECT 
         player_id,
@@ -10,19 +14,34 @@ WITH player_game_logs_agg AS (
         -- Total field goals attempted by the player
         SUM(field_goals_attempted) AS field_goals_attempted,
         -- Field goal percentage using macro
-        {{ calculate_percentage('SUM(field_goals_made)', 'SUM(field_goals_attempted)') }} AS field_goal_pct,
+        
+    CASE 
+        WHEN SUM(field_goals_attempted) = 0 OR SUM(field_goals_attempted) IS NULL THEN 0
+        ELSE ROUND(CAST(SUM(field_goals_made) AS FLOAT) / CAST(SUM(field_goals_attempted) AS FLOAT) * 100, 2)
+    END
+ AS field_goal_pct,
         -- Total three-point field goals made by the player
         SUM(three_point_made) AS three_point_made,
         -- Total three-point field goals attempted by the player
         SUM(three_point_attempted) AS three_point_attempted,
         -- Three-point field goal percentage using macro
-        {{ calculate_percentage('SUM(three_point_made)', 'SUM(three_point_attempted)') }} AS three_point_pct,
+        
+    CASE 
+        WHEN SUM(three_point_attempted) = 0 OR SUM(three_point_attempted) IS NULL THEN 0
+        ELSE ROUND(CAST(SUM(three_point_made) AS FLOAT) / CAST(SUM(three_point_attempted) AS FLOAT) * 100, 2)
+    END
+ AS three_point_pct,
         -- Total free throws made by the player
         SUM(free_throws_made) AS free_throws_made,
         -- Total free throws attempted by the player
         SUM(free_throws_attempted) AS free_throws_attempted,
         -- Free throw percentage using macro
-        {{ calculate_percentage('SUM(free_throws_made)', 'SUM(free_throws_attempted)') }} AS free_throw_pct,
+        
+    CASE 
+        WHEN SUM(free_throws_attempted) = 0 OR SUM(free_throws_attempted) IS NULL THEN 0
+        ELSE ROUND(CAST(SUM(free_throws_made) AS FLOAT) / CAST(SUM(free_throws_attempted) AS FLOAT) * 100, 2)
+    END
+ AS free_throw_pct,
         -- Total rebounds grabbed by the player
         SUM(total_rebounds) AS total_rebounds,
         -- Total offensive rebounds grabbed by the player
@@ -55,7 +74,7 @@ WITH player_game_logs_agg AS (
         SUM(CASE WHEN mins_played > 0 THEN 1 ELSE 0 END) AS games_played_counter
     FROM 
         -- Reference to the source data table containing player game logs
-        {{ ref('stg_player_game_logs') }}
+        NBA.staging.stg_player_game_logs
     GROUP BY 
         player_id, player_name, season, game_type
 )
@@ -65,4 +84,5 @@ SELECT
     * 
 FROM
     player_game_logs_agg
-    
+  );
+

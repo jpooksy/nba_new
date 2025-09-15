@@ -1,0 +1,34 @@
+
+  create or replace   view NBA.staging.stg_team_spend_by_season
+  
+   as (
+    WITH source AS (
+    SELECT 
+        *
+    FROM 
+        NBA.PUBLIC.TEAM_SPEND_BY_SEASON
+),
+
+renamed as (
+    SELECT 
+        team_id,
+        team_city,
+        team_name,
+        full_name,
+        year as season,
+        total_spend as team_payroll,
+        active_payroll,
+        dead_payroll,
+        luxury_tax_payroll,
+        luxury_tax_space,
+        luxury_tax_bill
+    FROM 
+        source
+)
+
+SELECT
+    *
+FROM
+    renamed
+  );
+

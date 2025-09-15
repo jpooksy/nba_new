@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+  - name: nba_player_performance_dashboard
+    type: dashboard
+    maturity: high
+    url: https://bi-tool.company.com/dashboards/nba_player_stats
+    description: >
+      Executive dashboard tracking NBA player performance metrics including shooting percentages,
+      scoring trends, and efficiency ratings. Used by team analysts and scouts for player evaluation.
+
+    depends_on:
+      - ref('player_game_logs_agg_example')
+      - ref('stg_common_player_info')
+
+    owner:
+      name: Basketball Analytics Team
+      email: analytics@nba-example.com
