@@ -17,13 +17,12 @@ clean-targets:
 
 models:
   nba: 
-    sources:
+    staging:
       +schema: staging
       +materialized: view
-    example_transformations:
-      intermediate:
-        +schema: intermediate
-        +materialized: view
-      warehouse:
-        +schema: warehouse
-        +materialized: table
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+    warehouse:
+      +schema: warehouse
+      +materialized: table

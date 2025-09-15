@@ -2,7 +2,7 @@
 
 sources:
   - name: NBA
-    database: NBA_HISTORICAL
+    database: NBA
     schema: PUBLIC
     tables:
       - name: COMMON_PLAYER_INFO
