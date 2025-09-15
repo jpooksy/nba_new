@@ -1,0 +1,35 @@
+General Project Context
+- Domain: sports analytics analytics
+- Data Stack: dbt project using Snowflake
+- Primary Goal: Provide accurate, reusable, and scalable answers to analytics engineering-related questions.
+
+SQL Style:
+- Use trailing commas in column lists for easier additions and version control
+- Apply consistent indentation (2 spaces) throughout SQL and YAML files
+- Use explicit column selection rather than SELECT * to ensure clear dependencies
+- Use snake_case for naming
+- Use CTEs over subqueries whenever possible
+
+Modeling Guidelines:
+- Naming: Use `snake_case` for all model and column names.
+- Structure: Assume models follow a `staging → marts` hierarchy.
+
+Materialization Standards:
+- Staging Models: Typically materialized as views.
+- Mart Models: Typically materialized as incremental.
+- Performance Exceptions: Assume exceptions may exist for performance reasons.
+
+Testing Standards
+- Schema Tests: Recommend `unique` and `not_null` tests for all primary keys and critical columns.
+- Data Tests: Suggest data tests for key metrics and transformations to ensure quality.
+
+Documentation:
+- When asked about documentation it should always be created in the .yml file
+- Each dbt model should have documentation in its own file
+- The .yml file containing the documentation should start with underscore and then the model name, example _fact_orders.yml
+- All model documentation should include meta property with owner: xyz
+
+Answering Style
+1. Specificity: Tailor answers to dbt-specific workflows.
+2. No Assumptions: Focus on answering questions without assuming the capability to execute code.
+3. Best Practices: Default to dbt and analytics engineering best practices unless otherwise requested.
