@@ -3,24 +3,24 @@ models:
   - name: stg_common_player_info
     description: >-
       This table contains non-statistical information about NBA players from
-      1946 - 2023. Sourced from the NBA API.  This data set comes from the
+      1946 - 2023. Sourced from the NBA API. This data set comes from the
       official NBA API. You can learn more here: https://github.com/swar/nba_api
-    tests:
+    data_tests:
       - unique:
           column_name: player_id
           name: unique_player_id
-          description: >-
-            Ensures that each player_id is unique in the table, preventing duplicate player records and maintaining data integrity.
+          meta:
+            description: "Ensures that each player_id is unique in the table, preventing duplicate player records and maintaining data integrity."
       - not_null:
           column_name: player_id
           name: not_null_player_id
-          description: >-
-            Verifies that player_id is never null, as it is a critical identifier for joining player-related tables.
+          meta:
+            description: "Verifies that player_id is never null, as it is a critical identifier for joining player-related tables."
       - not_null:
           column_name: full_name
           name: not_null_full_name
-          description: >-
-            Ensures that every player record has a full name, maintaining completeness of essential player information.
+          meta:
+            description: "Ensures that every player record has a full name, maintaining completeness of essential player information."
     columns:
       - name: player_id
         description: Unique identifier for the player.
