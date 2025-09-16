@@ -1,17 +1,13 @@
-
-
 WITH player_season_stats AS (
-    SELECT 
+    SELECT
         player_id,
         player_name,
         season,
-        SUM(points) as total_points
+        SUM(points) as total_points,
         COUNT(DISTINCT game_id) as games_played,
-        ROUND(SUM(points) / COUNT(DISTINCT game_id), 2) as points_per_game
+        ROUND(SUM(points)::FLOAT / COUNT(DISTINCT game_id), 2) as points_per_game
     FROM 
         NBA.staging.stg_player_game_logs
-    WHERE 
-        game_type = 'Regular Season'  -- Excluding playoff games to keep seasonal stats consistent
     GROUP BY 
         player_id,
         player_name,
@@ -20,13 +16,18 @@ WITH player_season_stats AS (
 
 ranked_players AS (
     SELECT 
-        *,
+        season,
+        player_id,
+        player_name,
+        total_points,
+        games_played,
+        points_per_game,
         ROW_NUMBER() OVER (PARTITION BY season ORDER BY total_points DESC) as scoring_rank
     FROM 
         player_season_stats
 )
 
-SELECT 
+SELECT
     season,
     player_id,
     player_name,
@@ -36,6 +37,4 @@ SELECT
 FROM 
     ranked_players
 WHERE 
-    scoring_rank = 1  -- Only selecting the top scorer for each season
-ORDER BY 
-    season DESC
+    scoring_rank = 1

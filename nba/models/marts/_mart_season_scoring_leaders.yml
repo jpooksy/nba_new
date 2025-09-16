@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: mart_season_scoring_leaders
+    description: "This model identifies the highest scoring player for each NBA season based on total points scored"
+    meta:
+      owner: "analytics_team"
+    columns:
+      - name: season
+        description: "The NBA season"
+        tests:
+          - not_null
+          - unique
+          
+      - name: player_id
+        description: "Unique identifier for the player"
+        tests:
+          - not_null
+          
+      - name: player_name
+        description: "Full name of the player"
+        tests:
+          - not_null
+          
+      - name: total_points
+        description: "Total points scored by the player in the season"
+        tests:
+          - not_null
+          
+      - name: games_played
+        description: "Number of games played by the player in the season"
+        tests:
+          - not_null
+          
+      - name: points_per_game
+        description: "Average points per game for the season"
+        tests:
+          - not_null
