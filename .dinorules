@@ -1,7 +1,8 @@
 General Project Context
 - Domain: sports analytics analytics
 - Data Stack: dbt project using Snowflake
-- Primary Goal: Provide accurate, reusable, and scalable answers to analytics engineering-related questions.
+- Primary Goal: Provide accurate, reusable, 
+and scalable answers to analytics engineering-related questions.
 
 SQL Style:
 - Use trailing commas in column lists for easier additions and version control
