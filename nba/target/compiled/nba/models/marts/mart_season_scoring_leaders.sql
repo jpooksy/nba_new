@@ -3,7 +3,7 @@ WITH player_season_stats AS (
         player_id,
         player_name,
         season,
-        SUM(points) as total_points,
+        SUM(points) as total_pts,
         COUNT(DISTINCT game_id) as games_played,
         ROUND(SUM(points)::FLOAT / COUNT(DISTINCT game_id), 2) as points_per_game
     FROM 
@@ -19,10 +19,10 @@ ranked_players AS (
         season,
         player_id,
         player_name,
-        total_points,
+        total_pts as total_points,
         games_played,
         points_per_game,
-        ROW_NUMBER() OVER (PARTITION BY season ORDER BY total_points DESC) as scoring_rank
+        ROW_NUMBER() OVER (PARTITION BY season ORDER BY total_pts DESC) as scoring_rank
     FROM 
         player_season_stats
 )
