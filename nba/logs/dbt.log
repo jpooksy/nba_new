@@ -7076,3 +7076,143 @@ WHERE
 [0m03:54:11.841450 [debug] [MainThread]: Command `dbt run` succeeded at 03:54:11.841305 after 5.47 seconds
 [0m03:54:11.843297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5fb1190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5fb0fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb387e110>]}
 [0m03:54:11.845205 [debug] [MainThread]: Flushing usage events
+[0m04:30:02.564183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa73d5d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa73d61d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa73d5850>]}
+
+
+============================== 04:30:02.567403 | f161af01-2e17-422d-a20f-3d099a08b29e ==============================
+[0m04:30:02.567403 [info ] [MainThread]: Running with dbt=1.8.7
+[0m04:30:02.569713 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/workspaces/fxtn7c3oiwkalwzz', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/workspaces/fxtn7c3oiwkalwzz/repository/nba/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --select mart_season_scoring_leaders', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m04:30:03.592151 [info ] [MainThread]: Initializing dbt-loom=0.7.0
+[0m04:30:03.592951 [info ] [MainThread]: dbt-loom: Patching ref protection methods to support dbt-loom dependencies.
+[0m04:30:03.595362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f161af01-2e17-422d-a20f-3d099a08b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff95433ad0>]}
+[0m04:30:03.667098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f161af01-2e17-422d-a20f-3d099a08b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8645b10>]}
+[0m04:30:03.668234 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m04:30:03.805282 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m04:30:03.973288 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m04:30:03.974286 [debug] [MainThread]: Partial parsing: updated file: nba://models/marts/mart_season_scoring_leaders.sql
+[0m04:30:04.256615 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m04:30:04.257386 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f161af01-2e17-422d-a20f-3d099a08b29e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8eee5610>]}
+[0m04:30:04.396680 [info ] [MainThread]: dbt-loom: Injecting nodes
+[0m04:30:04.495410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f161af01-2e17-422d-a20f-3d099a08b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e5fb990>]}
+[0m04:30:04.713662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f161af01-2e17-422d-a20f-3d099a08b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e406cd0>]}
+[0m04:30:04.714518 [info ] [MainThread]: Found 13 models, 10 data tests, 7 sources, 1 exposure, 461 macros
+[0m04:30:04.716380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f161af01-2e17-422d-a20f-3d099a08b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8f11ba90>]}
+[0m04:30:04.719518 [info ] [MainThread]: 
+[0m04:30:04.720357 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m04:30:04.722788 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA'
+[0m04:30:04.738554 [debug] [ThreadPool]: Using snowflake connection "list_NBA"
+[0m04:30:04.739219 [debug] [ThreadPool]: On list_NBA: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA"} */
+show terse schemas in database NBA
+    limit 10000
+[0m04:30:04.741236 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:30:05.578293 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 0.837 seconds
+[0m04:30:05.580481 [debug] [ThreadPool]: On list_NBA: Close
+[0m04:30:05.803464 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_NBA, now list_NBA_staging)
+[0m04:30:05.804382 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA_intermediate'
+[0m04:30:05.811192 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA_warehouse'
+[0m04:30:05.814822 [debug] [ThreadPool]: Using snowflake connection "list_NBA_staging"
+[0m04:30:05.815765 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_NBA_dbt_parker'
+[0m04:30:05.818346 [debug] [ThreadPool]: Using snowflake connection "list_NBA_intermediate"
+[0m04:30:05.822576 [debug] [ThreadPool]: Using snowflake connection "list_NBA_warehouse"
+[0m04:30:05.829921 [debug] [ThreadPool]: On list_NBA_warehouse: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_warehouse"} */
+show objects in NBA.warehouse limit 10000
+[0m04:30:05.827235 [debug] [ThreadPool]: Using snowflake connection "list_NBA_dbt_parker"
+[0m04:30:05.833648 [debug] [ThreadPool]: On list_NBA_dbt_parker: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_dbt_parker"} */
+show objects in NBA.dbt_parker limit 10000
+[0m04:30:05.823255 [debug] [ThreadPool]: On list_NBA_staging: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_staging"} */
+show objects in NBA.staging limit 10000
+[0m04:30:05.831775 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:30:05.827905 [debug] [ThreadPool]: On list_NBA_intermediate: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "connection_name": "list_NBA_intermediate"} */
+show objects in NBA.intermediate limit 10000
+[0m04:30:05.841851 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:30:05.837458 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:30:05.835524 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:30:06.443385 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.606 seconds
+[0m04:30:06.445761 [debug] [ThreadPool]: On list_NBA_staging: Close
+[0m04:30:06.466927 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.625 seconds
+[0m04:30:06.468911 [debug] [ThreadPool]: On list_NBA_intermediate: Close
+[0m04:30:06.624919 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.793 seconds
+[0m04:30:06.627090 [debug] [ThreadPool]: On list_NBA_warehouse: Close
+[0m04:30:07.250515 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.415 seconds
+[0m04:30:07.252755 [debug] [ThreadPool]: On list_NBA_dbt_parker: Close
+[0m04:30:07.906878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f161af01-2e17-422d-a20f-3d099a08b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8f3a11d0>]}
+[0m04:30:07.907807 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m04:30:07.909714 [info ] [MainThread]: 
+[0m04:30:07.914781 [debug] [Thread-1 (]: Began running node model.nba.mart_season_scoring_leaders
+[0m04:30:07.915663 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_parker.mart_season_scoring_leaders ............. [RUN]
+[0m04:30:07.917548 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_NBA_dbt_parker, now model.nba.mart_season_scoring_leaders)
+[0m04:30:07.919273 [debug] [Thread-1 (]: Began compiling node model.nba.mart_season_scoring_leaders
+[0m04:30:07.929091 [debug] [Thread-1 (]: Writing injected SQL for node "model.nba.mart_season_scoring_leaders"
+[0m04:30:07.933727 [debug] [Thread-1 (]: Began executing node model.nba.mart_season_scoring_leaders
+[0m04:30:07.964815 [debug] [Thread-1 (]: Writing runtime sql for node "model.nba.mart_season_scoring_leaders"
+[0m04:30:07.970926 [debug] [Thread-1 (]: Using snowflake connection "model.nba.mart_season_scoring_leaders"
+[0m04:30:07.971646 [debug] [Thread-1 (]: On model.nba.mart_season_scoring_leaders: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "nba", "target_name": "dev", "node_id": "model.nba.mart_season_scoring_leaders"} */
+create or replace   view NBA.dbt_parker.mart_season_scoring_leaders
+  
+   as (
+    WITH player_season_stats AS (
+    SELECT
+        player_id,
+        player_name,
+        season,
+        SUM(points) as total_pts,
+        COUNT(DISTINCT game_id) as games_played,
+        ROUND(SUM(points)::FLOAT / COUNT(DISTINCT game_id), 2) as points_per_game
+    FROM 
+        NBA.staging.stg_player_game_logs
+    GROUP BY 
+        player_id,
+        player_name,
+        season
+),
+
+ranked_players AS (
+    SELECT 
+        season,
+        player_id,
+        player_name,
+        total_pts as total_points,
+        games_played,
+        points_per_game,
+        ROW_NUMBER() OVER (PARTITION BY season ORDER BY total_pts DESC) as scoring_rank
+    FROM 
+        player_season_stats
+)
+
+SELECT
+    season,
+    player_id,
+    player_name,
+    total_points,
+    games_played,
+    points_per_game
+FROM 
+    ranked_players
+WHERE 
+    scoring_rank = 1
+  );
+[0m04:30:07.973495 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:30:10.153168 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.180 seconds
+[0m04:30:10.176800 [debug] [Thread-1 (]: On model.nba.mart_season_scoring_leaders: Close
+[0m04:30:10.618692 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f161af01-2e17-422d-a20f-3d099a08b29e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e62a350>]}
+[0m04:30:10.619710 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbt_parker.mart_season_scoring_leaders ........ [[32mSUCCESS 1[0m in 2.70s]
+[0m04:30:10.621703 [debug] [Thread-1 (]: Finished running node model.nba.mart_season_scoring_leaders
+[0m04:30:10.624502 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m04:30:10.625744 [debug] [MainThread]: Connection 'list_NBA_staging' was properly closed.
+[0m04:30:10.627644 [debug] [MainThread]: Connection 'list_NBA_intermediate' was properly closed.
+[0m04:30:10.629540 [debug] [MainThread]: Connection 'list_NBA_warehouse' was properly closed.
+[0m04:30:10.631370 [debug] [MainThread]: Connection 'model.nba.mart_season_scoring_leaders' was properly closed.
+[0m04:30:10.633328 [info ] [MainThread]: 
+[0m04:30:10.635065 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 5.91 seconds (5.91s).
+[0m04:30:10.637261 [debug] [MainThread]: Command end result
+[0m04:30:10.687831 [info ] [MainThread]: 
+[0m04:30:10.688585 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m04:30:10.690463 [info ] [MainThread]: 
+[0m04:30:10.692317 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m04:30:10.694956 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 8.193103, "process_user_time": 3.766158, "process_kernel_time": 0.349643, "process_mem_max_rss": "239352", "process_out_blocks": "4232", "process_in_blocks": "0"}
+[0m04:30:10.696440 [debug] [MainThread]: Command `dbt run` succeeded at 04:30:10.696314 after 8.19 seconds
+[0m04:30:10.698171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab43ecd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa9e17050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa73ab910>]}
+[0m04:30:10.699960 [debug] [MainThread]: Flushing usage events
