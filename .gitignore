@@ -4,8 +4,8 @@
 nba/logs/
 nba/logs/**
 
-# DBT taret
-**/taret/
-**/taret/**
-nba/taret/
-nba/taret/**
+# DBT target
+**/target/
+**/target/**
+nba/target/
+nba/target/**
