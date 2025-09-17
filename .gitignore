@@ -3,3 +3,9 @@
 **/logs/**
 nba/logs/
 nba/logs/**
+
+# DBT taret
+**/taret/
+**/taret/**
+nba/taret/
+nba/taret/**
