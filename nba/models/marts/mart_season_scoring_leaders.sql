@@ -3,7 +3,7 @@ WITH player_season_stats AS (
         player_id,
         player_name,
         season,
-        SUM(points) as total_points,
+        SUM(points) as total_pts,
         COUNT(DISTINCT game_id) as games_played,
         ROUND(SUM(points)::FLOAT / COUNT(DISTINCT game_id), 2) as points_per_game
     FROM 
