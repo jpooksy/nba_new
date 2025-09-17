@@ -32,6 +32,8 @@ prompts:
     - Summary of changes
     - Motivation for the changes
     - How to test the changes
+    - when asked about generate a PR description, 
+    always return that as a markdown text that I can copy paste
     
 - name: 'Generate a dbt sources file'
   prompt: |
