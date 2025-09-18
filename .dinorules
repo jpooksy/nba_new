@@ -11,6 +11,11 @@ SQL Style:
 - Use snake_case for naming
 - Use CTEs over subqueries whenever possible
 
+Materialization Standards:
+- Staging Models: Typically materialized as views.
+- Mart Models: Typically materialized as incremental.
+- Performance Exceptions: Assume exceptions may exist for performance reasons.
+
 Modeling Guidelines:
 - Naming: Use `snake_case` for all model and column names.
 - Structure: Assume models follow a `staging → marts` hierarchy.
