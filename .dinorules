@@ -15,11 +15,6 @@ Modeling Guidelines:
 - Naming: Use `snake_case` for all model and column names.
 - Structure: Assume models follow a `staging → marts` hierarchy.
 
-Materialization Standards:
-- Staging Models: Typically materialized as views.
-- Mart Models: Typically materialized as incremental.
-- Performance Exceptions: Assume exceptions may exist for performance reasons.
-
 Testing Standards
 - Schema Tests: Recommend `unique` and `not_null` tests for all primary keys and critical columns.
 - Data Tests: Suggest data tests for key metrics and transformations to ensure quality.

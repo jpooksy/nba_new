@@ -34,7 +34,16 @@ prompts:
     - How to test the changes
     - when asked about generate a PR description, 
     always return that as code in markdown text that I can copy paste
-    
+
+- name: 'Convert SQL to dbt model'
+  prompt: |
+    Convert this raw SQL into a proper dbt model:
+    1. Wrap in appropriate CTEs with clear names
+    2. Add {{ source() }} or {{ ref() }} references
+    3. Apply snake_case column naming
+    4. Suggest materialization strategy
+    Paste your SQL below:
+       
 - name: 'Generate a dbt sources file'
   prompt: |
     Generate a complete dbt sources.yml file following this step-by-step process:
