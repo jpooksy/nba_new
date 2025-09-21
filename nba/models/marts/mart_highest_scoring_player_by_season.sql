@@ -1,13 +1,21 @@
+{{
+  config(
+    materialized = 'table'
+  )
+}}
+
 WITH player_season_stats AS (
     SELECT 
         player_id,
         player_name,
         season,
-        SUM(points) as total_points,
+        SUM(points) as total_pts,
         COUNT(DISTINCT game_id) as games_played,
-        ROUND(SUM(points) / COUNT(DISTINCT game_id), 2) as points_per_game
+        ROUND(AVG(points), 2) as points_per_game
     FROM 
         {{ ref('stg_player_game_logs') }}
+    WHERE 
+        game_type = 'Regular Season'  -- Focusing on regular season stats only
     GROUP BY 
         player_id,
         player_name,
@@ -16,20 +24,17 @@ WITH player_season_stats AS (
 
 ranked_players AS (
     SELECT 
-        season,
-        player_id,
-        player_name,
-        total_points,
-        games_played,
-        points_per_game,
-        ROW_NUMBER() OVER (PARTITION BY season ORDER BY total_points DESC) as scoring_rank
+        *,
+        ROW_NUMBER() OVER (
+            PARTITION BY season 
+            ORDER BY total_points DESC
+        ) as scoring_rank
     FROM 
         player_season_stats
 )
 
 SELECT 
     season,
-    player_id,
     player_name,
     total_points,
     games_played,

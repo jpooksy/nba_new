@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: mart_highest_scoring_player_by_season
+    description: >
+      This model identifies the highest scoring player for each NBA season based on total points scored.
+      It only considers regular season games and provides additional context like games played and points per game.
+    meta:
+      owner: "dinoai"
+    columns:
+      - name: season
+        description: The NBA season (e.g., 2022-23)
+        tests:
+          - not_null
+          - unique
+      
+      - name: player_name
+        description: Full name of the player
+        tests:
+          - not_null
+      
+      - name: total_points
+        description: Total points scored by the player in the regular season
+        tests:
+          - not_null
+      
+      - name: games_played
+        description: Number of games played by the player in the regular season
+        tests:
+          - not_null
+      
+      - name: points_per_game
+        description: Average points per game for the season
+        tests:
+          - not_null
