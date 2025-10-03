@@ -9,7 +9,7 @@ WITH player_season_stats AS (
         player_id,
         player_name,
         season,
-        SUM(points) as total_pts,
+        SUM(points) as total_points,
         COUNT(DISTINCT game_id) as games_played,
         ROUND(AVG(points), 2) as points_per_game
     FROM 
