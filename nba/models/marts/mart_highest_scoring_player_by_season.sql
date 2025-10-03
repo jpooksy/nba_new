@@ -20,7 +20,6 @@ WITH player_season_stats AS (
         player_id,
         player_name,
         season
-        
 ),
 
 ranked_players AS (
