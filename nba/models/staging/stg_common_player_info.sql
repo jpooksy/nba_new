@@ -13,6 +13,7 @@ renamed AS (
         display_first_last AS full_name,
         display_last_comma_first,
         display_fi_last,
+        
         player_slug,
         birthdate,
         school,
